@@ -49,6 +49,13 @@ const App: React.FC = () => {
             Tenha acesso ao <strong className="text-brand-yellow font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
+          {/* Hero Image */}
+          <img 
+            src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1770579744/atv01__1_-removebg-preview_raacoh.png" 
+            alt="Prévia das atividades educativas no celular e impressas" 
+            className="w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto mb-8 object-contain"
+          />
+
           <div className="flex flex-col items-center w-full">
             <Button onClick={scrollToOffer} className="shadow-brand-green/40 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
               ⬇️ QUERO ACESSAR O APP AGORA
