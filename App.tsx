@@ -26,7 +26,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-white font-sans text-gray-800">
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-[linear-gradient(180deg,#1e3a8a_0%,#1F4FD8_100%)] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
+      <header className="relative bg-[#1e41a5] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-white blur-xl"></div>
