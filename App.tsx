@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
           {/* Hero Image */}
           <img 
-            src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1770579744/atv01__1_-removebg-preview_raacoh.png" 
+            src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1770581055/image_1770580969083_35hlbs_dt4f28.png" 
             alt="Prévia das atividades educativas no celular e impressas" 
             className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mb-8 object-contain"
           />
