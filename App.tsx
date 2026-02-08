@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <img 
             src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1770579744/atv01__1_-removebg-preview_raacoh.png" 
             alt="Prévia das atividades educativas no celular e impressas" 
-            className="w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto mb-8 object-contain"
+            className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mb-8 object-contain"
           />
 
           <div className="flex flex-col items-center w-full">
