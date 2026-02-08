@@ -26,7 +26,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-white font-sans text-gray-800">
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-[linear-gradient(180deg,#1e3a8a_0%,#1F4FD8_30%,#1F4FD8_90%,#EAF0FF_100%)] overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32">
+      <header className="relative bg-[linear-gradient(180deg,#1e3a8a_0%,#1F4FD8_30%,#1F4FD8_90%,#EAF0FF_100%)] overflow-hidden pt-2 pb-20 lg:pt-4 lg:pb-32">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-white blur-xl"></div>
@@ -34,85 +34,86 @@ const App: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center text-white">
-          <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 backdrop-blur-sm border border-white/20">
-            <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-            <span className="text-sm font-semibold tracking-wide">NOVIDADE EXCLUSIVA</span>
+          
+          {/* Top Badge - Urgency */}
+          <div className="inline-block bg-brand-yellow text-brand-blue px-6 py-2 rounded-full mb-6 font-bold text-sm tracking-wide shadow-lg animate-pulse">
+            ⚠️ Restam Apenas 57 Acessos
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-6 max-w-4xl mx-auto">
             📱 1.500 ATIVIDADES INTERATIVAS <br className="hidden md:block"/>
             <span className="text-brand-yellow">para reforçar e acelerar</span> o aprendizado
           </h1>
           
-          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Tenha acesso ao <strong className="text-white">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
+          <p className="text-base md:text-lg text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Tenha acesso ao <strong className="text-brand-yellow font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-sm md:text-base font-medium">
-            <div className="flex items-center gap-2 bg-blue-800/50 px-4 py-2 rounded-lg">
-              <Smartphone className="w-5 h-5 text-brand-yellow" />
-              <span>Tudo no app</span>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-800/50 px-4 py-2 rounded-lg">
-              <FileText className="w-5 h-5 text-brand-yellow" />
-              <span>Sem bagunça</span>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-800/50 px-4 py-2 rounded-lg">
-              <Download className="w-5 h-5 text-brand-yellow" />
-              <span>Acesso rápido</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center animate-bounce-subtle">
-            <Button onClick={scrollToOffer} className="shadow-brand-yellow/30 shadow-lg text-lg px-12 py-5 w-full md:w-auto">
+          <div className="flex flex-col items-center">
+            <Button onClick={scrollToOffer} className="shadow-brand-yellow/30 shadow-lg text-lg px-8 py-4 md:px-12 md:py-5 w-full md:w-auto animate-bounce-subtle">
               ⬇️ QUERO ACESSAR O APP AGORA
             </Button>
-            <p className="mt-4 text-sm text-blue-200 opacity-80">Compra 100% segura • Acesso imediato</p>
+            <p className="mt-4 text-xs md:text-sm text-blue-200 opacity-80 font-medium">Compra 100% segura • Acesso imediato</p>
+          </div>
+
+          {/* Feature Pills - Now below CTA */}
+          <div className="flex flex-wrap justify-center items-center gap-4 mt-8 text-xs md:text-sm font-medium opacity-90">
+            <div className="flex items-center gap-2 bg-blue-900/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <Smartphone className="w-4 h-4 text-brand-yellow" />
+              <span>Tudo no app</span>
+            </div>
+            <div className="flex items-center gap-2 bg-blue-900/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <FileText className="w-4 h-4 text-brand-yellow" />
+              <span>Sem bagunça</span>
+            </div>
+            <div className="flex items-center gap-2 bg-blue-900/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <Download className="w-4 h-4 text-brand-yellow" />
+              <span>Acesso rápido</span>
+            </div>
           </div>
         </div>
       </header>
 
       {/* 2️⃣ VALUE & ORGANIZATION */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-4">
               🎯 Aprender nunca foi tão fácil (e organizado)
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-base md:text-lg">
               O aplicativo reúne mais de <strong className="text-brand-blue">80 apostilas</strong>, somando +1.500 atividades, para crianças de 3 a 8 anos. Tudo na palma da sua mão.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { title: "Separado por Temas", desc: "Encontre exatamente o que seu filho precisa em segundos.", icon: CheckCircle2 },
               { title: "Acesso Rápido", desc: "Não perca tempo procurando arquivos em pastas perdidas.", icon: Smartphone },
               { title: "Download em PDF", desc: "Baixe e imprima quantas vezes quiser.", icon: Download },
               { title: "Sempre Disponível", desc: "Seu material vitalício, sem mensalidades.", icon: Clock },
             ].map((item, idx) => (
-              <div key={idx} className="bg-brand-lightBlue p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-blue-100">
-                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-brand-blue">
-                  <item.icon className="w-7 h-7" />
+              <div key={idx} className="bg-brand-lightBlue p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-blue-100">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm text-brand-blue">
+                  <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3️⃣ PAIN POINTS */}
-      <section className="py-20 bg-brand-lightBlue">
+      {/* 3️⃣ PAIN POINTS - Gray Background */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* Removido o card bg-white e sombras, mantendo a estrutura flex */}
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
             <div className="flex-1">
               <div className="inline-block bg-brand-red/10 text-brand-red px-4 py-1 rounded-full text-sm font-bold mb-4">
                 O PROBLEMA
               </div>
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-6">
                 ❌ Chega de perder horas procurando atividades na internet
               </h2>
               <div className="space-y-4">
@@ -131,14 +132,14 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            {/* Ajustado cor do divider para aparecer no fundo azul */}
-            <div className="hidden md:block w-px h-64 bg-brand-blue/20"></div>
+            {/* Ajustado cor do divider para aparecer no fundo cinza */}
+            <div className="hidden md:block w-px h-64 bg-gray-300"></div>
 
             <div className="flex-1">
                <div className="inline-block bg-brand-green/10 text-brand-green px-4 py-1 rounded-full text-sm font-bold mb-4">
                 A SOLUÇÃO
               </div>
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-6">
                 ✅ Tenha tudo pronto em um só lugar
               </h2>
                <div className="space-y-4">
@@ -167,7 +168,7 @@ const App: React.FC = () => {
       {/* 4️⃣ HOW IT WORKS */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-           <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-16">
+           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-16">
             📲 Como funciona o acesso ao aplicativo
           </h2>
           
@@ -197,7 +198,7 @@ const App: React.FC = () => {
       <section className="py-20 bg-brand-lightBlue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4">
               🧠 O que você encontra dentro do app
             </h2>
             <p className="text-gray-600">Material didático completo para o desenvolvimento infantil.</p>
@@ -225,7 +226,7 @@ const App: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-blue mb-4">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-4">
               ❤️ Quem baixou o app, amou
             </h2>
           </div>
@@ -256,7 +257,7 @@ const App: React.FC = () => {
       <section className="py-20 bg-brand-lightBlue overflow-hidden">
         <div className="container mx-auto px-4">
            <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-2">
               🎁 E não para por aí...
             </h2>
             <p className="text-gray-600">Receba esses bônus exclusivos gratuitamente hoje.</p>
