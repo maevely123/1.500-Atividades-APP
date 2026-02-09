@@ -285,15 +285,32 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {BONUSES.map((bonus, idx) => (
-              <div key={idx} className="bg-white p-4 md:p-6 rounded-xl border border-blue-100 flex items-center gap-4 hover:shadow-md transition-shadow">
-                <div className="bg-red-50 p-3 rounded-lg">
-                  <Gift className="w-6 h-6 text-brand-red" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-800 text-sm md:text-base">{bonus.title}</h4>
-                  <p className="text-xs md:text-sm text-gray-500">Valor separado: <span className="line-through">{bonus.price}</span></p>
-                  <p className="text-[10px] md:text-xs font-bold text-brand-green uppercase mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">Grátis hoje</p>
+            {BONUSES.map((bonus: any, idx) => (
+              <div key={idx} className="bg-white p-4 md:p-5 rounded-xl border border-blue-100 flex flex-col hover:shadow-md transition-shadow h-full">
+                
+                {/* Title Top */}
+                <h4 className="font-bold text-gray-800 text-sm md:text-base mb-3 text-center md:text-left">{bonus.title}</h4>
+                
+                {/* Optional Image Middle */}
+                {bonus.image && (
+                  <div className="flex justify-center mb-4 w-full">
+                     <img 
+                       src={bonus.image} 
+                       alt={bonus.title} 
+                       className="w-full h-auto max-h-60 object-contain drop-shadow-md transform hover:scale-105 transition-transform duration-300" 
+                     />
+                  </div>
+                )}
+                
+                {/* Footer Bottom (Icon + Info) */}
+                <div className="flex items-center gap-3 mt-auto pt-1">
+                  <div className="bg-red-50 p-2.5 rounded-lg flex-shrink-0">
+                    <Gift className="w-5 h-5 text-brand-red" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 leading-tight">Valor separado: <span className="line-through">{bonus.price}</span></p>
+                    <p className="text-[10px] font-bold text-brand-green uppercase mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">Grátis hoje</p>
+                  </div>
                 </div>
               </div>
             ))}
