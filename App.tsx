@@ -286,30 +286,33 @@ const App: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {BONUSES.map((bonus: any, idx) => (
-              <div key={idx} className="bg-white p-4 md:p-5 rounded-xl border border-blue-100 flex flex-col hover:shadow-md transition-shadow h-full">
+              <div key={idx} className="bg-white rounded-xl border border-blue-100 flex flex-col hover:shadow-md transition-shadow h-full overflow-hidden">
                 
-                {/* Title Top */}
-                <h4 className="font-bold text-gray-800 text-sm md:text-base mb-3 text-center md:text-left">{bonus.title}</h4>
-                
-                {/* Optional Image Middle */}
+                {/* Image Top (Full Bleed) */}
                 {bonus.image && (
-                  <div className="flex justify-center mb-4 w-full">
+                  <div className="w-full">
                      <img 
                        src={bonus.image} 
                        alt={bonus.title} 
-                       className="w-full h-auto max-h-60 object-contain drop-shadow-md transform hover:scale-105 transition-transform duration-300" 
+                       className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500" 
                      />
                   </div>
                 )}
                 
-                {/* Footer Bottom (Icon + Info) */}
-                <div className="flex items-center gap-3 mt-auto pt-1">
-                  <div className="bg-red-50 p-2.5 rounded-lg flex-shrink-0">
-                    <Gift className="w-5 h-5 text-brand-red" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 leading-tight">Valor separado: <span className="line-through">{bonus.price}</span></p>
-                    <p className="text-[10px] font-bold text-brand-green uppercase mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">Grátis hoje</p>
+                {/* Content Area */}
+                <div className="p-4 md:p-5 flex flex-col flex-grow">
+                  {/* Title */}
+                  <h4 className="font-bold text-gray-800 text-sm md:text-base mb-3 text-center md:text-left">{bonus.title}</h4>
+                  
+                  {/* Footer Bottom (Icon + Info) */}
+                  <div className="flex items-center gap-3 mt-auto pt-1">
+                    <div className="bg-red-50 p-2.5 rounded-lg flex-shrink-0">
+                      <Gift className="w-5 h-5 text-brand-red" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 leading-tight">Valor separado: <span className="line-through">{bonus.price}</span></p>
+                      <p className="text-[10px] font-bold text-brand-green uppercase mt-1 bg-green-50 inline-block px-2 py-0.5 rounded">Grátis hoje</p>
+                    </div>
                   </div>
                 </div>
               </div>
