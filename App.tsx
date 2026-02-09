@@ -360,10 +360,15 @@ const App: React.FC = () => {
                   <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
                   <span className="text-sm font-medium">+1.500 Atividades PDF</span>
                 </div>
-                <div className="flex items-center gap-3 text-gray-700">
-                  <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
-                  <span className="text-sm font-medium">5 Bônus Exclusivos</span>
-                </div>
+                
+                {/* Bonuses List */}
+                {BONUSES.map((bonus: any, idx: number) => (
+                  <div key={idx} className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
+                    <span className="text-sm font-medium">Bônus {idx + 1}: {bonus.title}</span>
+                  </div>
+                ))}
+
                 <div className="flex items-center gap-3 text-gray-700">
                   <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
                   <span className="text-sm font-medium">Garantia de 7 dias</span>
