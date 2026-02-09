@@ -60,7 +60,11 @@ export const BONUSES = [
     price: "R$ 17,00",
     image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770600303/leitu._cczurf.png"
   },
-  { title: "Consciência Silábica", price: "R$ 17,00" },
+  { 
+    title: "Consciência Silábica", 
+    price: "R$ 17,00",
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770600635/silab_vmddzp.png"
+  },
   { title: "Interpretação e Escrita", price: "R$ 17,00" },
 ];
 
