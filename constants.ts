@@ -65,7 +65,11 @@ export const BONUSES = [
     price: "R$ 17,00",
     image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770600635/silab_vmddzp.png"
   },
-  { title: "Interpretação e Escrita", price: "R$ 17,00" },
+  { 
+    title: "Interpretação e Escrita", 
+    price: "R$ 17,00",
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770600934/inter._escri_diynx2.png"
+  },
 ];
 
 export const HOW_IT_WORKS = [
