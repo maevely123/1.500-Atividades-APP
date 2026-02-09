@@ -50,7 +50,11 @@ export const BONUSES = [
     price: "R$ 27,00",
     image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770598326/cigarra_3d_vmreid.png"
   },
-  { title: "Brincadeiras Interativas", price: "R$ 27,00" },
+  { 
+    title: "Brincadeiras Interativas", 
+    price: "R$ 27,00",
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770599925/jogo_int._e6nvoy.png"
+  },
   { title: "Leiturinhas", price: "R$ 17,00" },
   { title: "Consciência Silábica", price: "R$ 17,00" },
   { title: "Interpretação e Escrita", price: "R$ 17,00" },
