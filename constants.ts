@@ -57,13 +57,13 @@ export const HOW_IT_WORKS = [
     step: 1,
     title: "Baixe o App",
     desc: "Acesso enviado por e-mail após a compra",
-    icon: Smartphone
+    icon: Download
   },
   {
     step: 2,
     title: "Acesse pelo celular",
     desc: "Celular, tablet ou computador",
-    icon: BookOpen
+    icon: Smartphone
   },
   {
     step: 3,
