@@ -37,12 +37,12 @@ export const APP_CONTENT = [
   { 
     title: "Alfabeto Fônico", 
     icon: Speaker,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Alfabeto"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770687396/ChatGPT_Image_9_de_fev._de_2026_22_36_26_zh8mdz.png"
   },
   { 
     title: "Aprendendo as Vogais", 
     icon: Type,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Vogais"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770687733/ChatGPT_Image_9_de_fev._de_2026_22_41_53_jxxds2.png"
   },
   { 
     title: "Sílabas Simples", 
