@@ -47,7 +47,7 @@ export const APP_CONTENT = [
   { 
     title: "Sílabas Simples", 
     icon: Puzzle,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Sílabas"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770688102/ChatGPT_Image_9_de_fev._de_2026_22_47_52_nnfjco.png"
   },
 ];
 
