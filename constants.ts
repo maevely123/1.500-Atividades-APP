@@ -14,13 +14,41 @@ import {
 } from 'lucide-react';
 
 export const APP_CONTENT = [
-  { title: "Separando as Sílabas", icon: BookOpen },
-  { title: "Barraquinha das Sílabas", icon: Tent },
-  { title: "Formando Palavras", icon: Pencil },
-  { title: "Matemática para Alfabetização", icon: Calculator },
-  { title: "Alfabeto Fônico", icon: Speaker },
-  { title: "Aprendendo as Vogais", icon: Type },
-  { title: "Sílabas Simples", icon: Puzzle },
+  { 
+    title: "Separando as Sílabas", 
+    icon: BookOpen,
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770685545/ChatGPT_Image_9_de_fev._de_2026_22_05_14_ginkaq.png"
+  },
+  { 
+    title: "Barraquinha das Sílabas", 
+    icon: Tent,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Barraquinha"
+  },
+  { 
+    title: "Formando Palavras", 
+    icon: Pencil,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Palavras"
+  },
+  { 
+    title: "Matemática para Alfabetização", 
+    icon: Calculator,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Matemática"
+  },
+  { 
+    title: "Alfabeto Fônico", 
+    icon: Speaker,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Alfabeto"
+  },
+  { 
+    title: "Aprendendo as Vogais", 
+    icon: Type,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Vogais"
+  },
+  { 
+    title: "Sílabas Simples", 
+    icon: Puzzle,
+    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Sílabas"
+  },
 ];
 
 export const TESTIMONIALS = [

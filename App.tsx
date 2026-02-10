@@ -225,17 +225,33 @@ const App: React.FC = () => {
             <p className="text-gray-600">Material didático completo para o desenvolvimento infantil.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
-            {APP_CONTENT.map((content, idx) => (
-              <div key={idx} className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-blue-50 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                <div className="p-3 bg-brand-lightBlue rounded-full mb-3 md:mb-4 text-brand-blue">
-                  <content.icon className="w-6 h-6 md:w-8 md:h-8" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {APP_CONTENT.map((content: any, idx) => (
+              <div key={idx} className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+                {/* Image Container */}
+                <div className="h-40 md:h-48 w-full overflow-hidden bg-gray-100 relative">
+                   {content.image ? (
+                     <img 
+                       src={content.image} 
+                       alt={content.title} 
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                     />
+                   ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue">
+                         <content.icon className="w-12 h-12 opacity-50" />
+                      </div>
+                   )}
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-gray-800">{content.title}</h3>
+                
+                {/* Title Container */}
+                <div className="p-4 bg-white flex items-center justify-center flex-grow z-10 relative">
+                   <h3 className="text-sm md:text-base font-semibold text-gray-800 text-center">{content.title}</h3>
+                </div>
               </div>
             ))}
+            
             {/* "And much more" card */}
-            <div className="bg-brand-blue p-4 md:p-6 rounded-xl shadow-sm flex flex-col items-center justify-center text-center text-white transform hover:scale-105 transition-transform">
+            <div className="bg-brand-blue rounded-xl shadow-sm flex flex-col items-center justify-center text-center text-white transform hover:scale-105 transition-transform overflow-hidden min-h-[12rem] p-4">
               <span className="text-2xl md:text-3xl font-bold mb-1">+1.400</span>
               <p className="font-medium text-xs md:text-sm opacity-90">Atividades disponíveis</p>
             </div>
