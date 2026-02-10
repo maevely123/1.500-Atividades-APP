@@ -244,8 +244,8 @@ const App: React.FC = () => {
                 </div>
                 
                 {/* Title Container */}
-                <div className="p-4 bg-white flex items-center justify-center flex-grow z-10 relative">
-                   <h3 className="text-sm md:text-base font-semibold text-gray-800 text-center">{content.title}</h3>
+                <div className="p-4 bg-brand-blue flex items-center justify-center flex-grow z-10 relative">
+                   <h3 className="text-sm md:text-base font-semibold text-white text-center">{content.title}</h3>
                 </div>
               </div>
             ))}

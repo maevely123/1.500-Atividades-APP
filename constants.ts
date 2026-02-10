@@ -27,12 +27,12 @@ export const APP_CONTENT = [
   { 
     title: "Formando Palavras", 
     icon: Pencil,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Palavras"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770686806/ChatGPT_Image_9_de_fev._de_2026_22_22_07_w4kjby.png"
   },
   { 
     title: "Matemática para Alfabetização", 
     icon: Calculator,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Matemática"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770686903/ChatGPT_Image_9_de_fev._de_2026_22_28_12_foacce.png"
   },
   { 
     title: "Alfabeto Fônico", 
