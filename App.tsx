@@ -229,23 +229,21 @@ const App: React.FC = () => {
             {APP_CONTENT.map((content: any, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
                 {/* Image Container */}
-                <div className="h-40 md:h-48 w-full overflow-hidden bg-gray-100 relative">
+                <div className="h-40 md:h-48 w-full overflow-hidden bg-bg-brand-blue relative">
+                   <div className="p-4 bg-brand-blue flex items-center justify-center w-full h-8 absolute top-0 z-10">
+                      <h3 className="text-sm md:text-base font-semibold text-white text-center">{content.title}</h3>
+                   </div>
                    {content.image ? (
                      <img 
                        src={content.image} 
                        alt={content.title} 
-                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pt-8" 
                      />
                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue">
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue pt-8">
                          <content.icon className="w-12 h-12 opacity-50" />
                       </div>
                    )}
-                </div>
-                
-                {/* Title Container */}
-                <div className="p-4 bg-brand-blue flex items-center justify-center flex-grow z-10 relative">
-                   <h3 className="text-sm md:text-base font-semibold text-white text-center">{content.title}</h3>
                 </div>
               </div>
             ))}
@@ -356,15 +354,25 @@ const App: React.FC = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Acesso Vitalício ao App</h3>
               <p className="text-gray-500 mb-8 text-sm md:text-base">+1.500 Atividades + Todos os Bônus</p>
 
-              <div className="flex flex-col items-center justify-center mb-8">
-                <span className="text-gray-400 text-base md:text-lg line-through decoration-red-500 mb-1">De R$ 197,00</span>
-                <div className="flex items-center gap-2">
-                  <span className="text-5xl md:text-6xl font-extrabold text-brand-red">R$ 47</span>
-                  <div className="text-left leading-tight text-gray-600 text-xs md:text-sm font-medium">
-                    <span className="block">à vista</span>
-                    <span className="block">pagamento único</span>
+              {/* Pricing Block Optimized for Conversion */}
+              <div className="flex flex-col items-center justify-center mb-8 bg-blue-50/50 p-6 rounded-2xl border border-blue-100 w-full max-w-sm mx-auto">
+                {/* Anchor Price */}
+                <p className="text-gray-400 text-sm md:text-base font-medium mb-1">
+                  De <span className="line-through decoration-red-500">R$ 197,00</span> por apenas:
+                </p>
+
+                {/* Hero Price (Installments) */}
+                <div className="flex flex-col items-center leading-none mb-3 mt-1">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-xl md:text-2xl font-bold text-gray-700">4x de</span>
+                    <span className="text-5xl md:text-6xl font-extrabold text-green-600 tracking-tighter">R$ 9,25</span>
                   </div>
                 </div>
+
+                {/* Cash Price */}
+                <p className="text-brand-blue font-bold text-lg md:text-xl border-t border-blue-200/50 w-full pt-3 mt-1">
+                  ou R$ 37,00 à vista
+                </p>
               </div>
 
               <div className="space-y-3 mb-8 text-left max-w-xs mx-auto">
