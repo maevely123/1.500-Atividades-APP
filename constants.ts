@@ -22,7 +22,7 @@ export const APP_CONTENT = [
   { 
     title: "Barraquinha das Sílabas", 
     icon: Tent,
-    image: "https://placehold.co/600x400/EAF0FF/1F4FD8?text=Barraquinha"
+    image: "https://res.cloudinary.com/dvg6hojfs/image/upload/v1770686452/ChatGPT_Image_9_de_fev._de_2026_22_15_28_z9x1xd.png"
   },
   { 
     title: "Formando Palavras", 
