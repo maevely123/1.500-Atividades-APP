@@ -399,7 +399,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <Button onClick={() => alert("Redirect to checkout")} fullWidth className="text-lg py-4 md:py-5 shadow-brand-green/50 animate-pulse">
+              <Button onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} fullWidth className="text-lg py-4 md:py-5 shadow-brand-green/50 animate-pulse">
                 👉 SIM! QUERO ACESSAR O APP AGORA
               </Button>
               <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-[10px] md:text-xs">
