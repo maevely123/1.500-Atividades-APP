@@ -229,21 +229,22 @@ const App: React.FC = () => {
             {APP_CONTENT.map((content: any, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
                 {/* Image Container */}
-                <div className="h-40 md:h-48 w-full overflow-hidden bg-bg-brand-blue relative">
-                   <div className="p-4 bg-brand-blue flex items-center justify-center w-full h-8 absolute top-0 z-10">
-                      <h3 className="text-sm md:text-base font-semibold text-white text-center">{content.title}</h3>
-                   </div>
+                <div className="h-40 md:h-48 w-full overflow-hidden bg-white relative">
                    {content.image ? (
                      <img 
                        src={content.image} 
                        alt={content.title} 
-                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pt-8" 
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                      />
                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue pt-8">
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue">
                          <content.icon className="w-12 h-12 opacity-50" />
                       </div>
                    )}
+                </div>
+                {/* Title Container */}
+                <div className="bg-brand-blue p-2 md:p-3 flex items-center justify-center flex-grow min-h-[3rem]">
+                   <h3 className="text-xs md:text-sm font-semibold text-white text-center leading-tight">{content.title}</h3>
                 </div>
               </div>
             ))}
