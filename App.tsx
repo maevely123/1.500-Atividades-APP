@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { 
   Smartphone, 
   FileText, 
@@ -17,21 +17,7 @@ import { Button } from './components/Button';
 import { Accordion } from './components/Accordion';
 import { APP_CONTENT, TESTIMONIALS, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
 
-// Declare fbq to avoid TypeScript errors
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
 const App: React.FC = () => {
-  // Trigger Facebook Pixel PageView on component mount
-  useEffect(() => {
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'PageView');
-    }
-  }, []);
-
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
   };
