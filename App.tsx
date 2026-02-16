@@ -11,7 +11,9 @@ import {
   Star,
   Gift,
   Menu,
-  Check
+  Check,
+  Users,
+  BookOpen
 } from 'lucide-react';
 import { Button } from './components/Button';
 import { Accordion } from './components/Accordion';
@@ -94,33 +96,47 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      {/* 2️⃣ VALUE & ORGANIZATION */}
-      <section className="pt-8 pb-16 bg-white">
+      {/* 2️⃣ STATS SECTION (Replacement for Value & Organization) */}
+      <section className="py-12 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-3">
-              🎯 Aprender nunca foi tão fácil (e organizado)
-            </h2>
-            <p className="text-gray-600 text-sm md:text-lg">
-              O aplicativo reúne mais de <strong className="text-brand-blue">80 apostilas</strong>, somando +1.500 atividades, para crianças de 3 a 8 anos. Tudo na palma da sua mão.
-            </p>
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+            
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center group">
+              <Users className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
+                Mais de <br className="md:hidden" /> 12.000
+              </h3>
+              <p className="text-gray-500 font-medium text-sm md:text-base">Famílias Satisfeitas</p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { title: "Separado por Temas", desc: "Encontre exatamente o que seu filho precisa em segundos.", icon: CheckCircle2 },
-              { title: "Acesso Rápido", desc: "Não perca tempo procurando arquivos em pastas perdidas.", icon: Smartphone },
-              { title: "Download em PDF", desc: "Baixe e imprima quantas vezes quiser.", icon: Download },
-              { title: "Sempre Disponível", desc: "Seu material vitalício, sem mensalidades.", icon: Clock },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-[#F8FAFC] p-5 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-3 shadow-sm text-brand-blue border border-blue-50">
-                  <item.icon className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold mb-1 text-gray-800">{item.title}</h3>
-                <p className="text-xs md:text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center group">
+              <BookOpen className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
+                1500+
+              </h3>
+              <p className="text-gray-500 font-medium text-sm md:text-base">Atividades Prontas</p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col items-center group">
+              <Star className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform fill-orange-500/10" />
+              <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
+                4,9/5
+              </h3>
+              <p className="text-gray-500 font-medium text-sm md:text-base">Avaliação Média</p>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="flex flex-col items-center group">
+              <Download className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
+                100%
+              </h3>
+              <p className="text-gray-500 font-medium text-sm md:text-base">Digital e Imediato</p>
+            </div>
+
           </div>
         </div>
       </section>
