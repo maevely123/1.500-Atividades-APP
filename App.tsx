@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from './components/Button';
 import { Accordion } from './components/Accordion';
+import { SalesNotification } from './components/SalesNotification';
 import { APP_CONTENT, TESTIMONIALS, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
 
 const App: React.FC = () => {
@@ -24,6 +25,9 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
+      
+      {/* Componente de Notificação de Vendas */}
+      <SalesNotification />
       
       {/* 1️⃣ HERO SECTION */}
       <header className="relative bg-[#1e41a5] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
