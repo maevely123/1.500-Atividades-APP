@@ -18,7 +18,7 @@ import {
 import { Button } from './components/Button';
 import { Accordion } from './components/Accordion';
 import { SalesNotification } from './components/SalesNotification';
-import { APP_CONTENT, TESTIMONIALS, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
+import { APP_CONTENT, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
 
 const App: React.FC = () => {
   const scrollToOffer = () => {
@@ -287,24 +287,16 @@ const App: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t, idx) => (
-              <div key={idx} className="bg-gray-50 p-6 md:p-8 rounded-2xl relative border border-gray-100">
-                <div className="flex text-brand-yellow mb-4">
-                  {[...Array(t.stars)].map((_, i) => <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-current" />)}
-                </div>
-                <p className="text-gray-700 italic mb-6 text-sm md:text-base">"{t.text}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center font-bold text-brand-blue">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto w-full px-4 md:px-0">
+             <iframe 
+               src="https://id-preview--37be4a18-dab4-45be-8216-75d328928ff4.lovable.app/embed/36df9093-d08c-4b56-9478-05dd3edb164e?color=%230011ff&progress=%230033ff&controls=false&autoplay=false&loop=false" 
+               width="100%" 
+               height="450" 
+               frameBorder="0" 
+               allowFullScreen 
+               allow="autoplay; fullscreen"
+               className="rounded-2xl shadow-xl w-full"
+             ></iframe>
           </div>
         </div>
       </section>
