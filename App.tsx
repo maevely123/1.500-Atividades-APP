@@ -289,7 +289,7 @@ const App: React.FC = () => {
 
           <div className="max-w-4xl mx-auto w-full px-4 md:px-0">
              <iframe 
-               src="https://id-preview--37be4a18-dab4-45be-8216-75d328928ff4.lovable.app/embed/36df9093-d08c-4b56-9478-05dd3edb164e?color=%230011ff&progress=%230033ff&controls=false&autoplay=false&loop=false" 
+               src="https://cozy-video-box.lovable.app/embed/25a5f57b-1fe7-42e9-b2bb-ada7c345bf8b?color=%2300d4ff&progress=%2300d4ff&controls=true&autoplay=false&loop=false" 
                width="100%" 
                height="450" 
                frameBorder="0" 
