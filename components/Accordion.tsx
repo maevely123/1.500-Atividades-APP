@@ -16,7 +16,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen,
         onClick={onClick}
       >
         <span className="font-heading font-semibold text-gray-800 text-base md:text-lg">{question}</span>
-        {isOpen ? <ChevronUp className="text-brand-blue flex-shrink-0" /> : <ChevronDown className="text-gray-400 flex-shrink-0" />}
+        {isOpen ? <ChevronUp className="text-brand-purple flex-shrink-0" /> : <ChevronDown className="text-gray-400 flex-shrink-0" />}
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${

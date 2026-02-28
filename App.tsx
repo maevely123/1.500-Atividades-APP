@@ -32,7 +32,7 @@ const App: React.FC = () => {
       <SalesNotification />
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-[#1e41a5] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
+      <header className="relative bg-brand-purple overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-white blur-xl"></div>
@@ -42,7 +42,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-20 text-center text-white flex flex-col items-center">
           
           {/* Top Badge - Urgency */}
-          <div className="inline-block bg-brand-yellow text-brand-blue px-4 py-1.5 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,217,102,0.6)] animate-pulse border-2 border-yellow-200">
+          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.6)] animate-pulse border-2 border-yellow-200">
             ⚠️ Restam Apenas 57 Acessos
           </div>
           
@@ -51,7 +51,7 @@ const App: React.FC = () => {
             <span className="text-brand-yellow">para reforçar e acelerar</span> o aprendizado
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-blue-50 max-w-2xl mx-auto mb-6 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-purple-50 max-w-2xl mx-auto mb-6 leading-relaxed">
             Tenha acesso ao <strong className="text-brand-yellow font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
@@ -63,25 +63,25 @@ const App: React.FC = () => {
           />
 
           <div className="flex flex-col items-center w-full">
-            <Button onClick={scrollToOffer} className="shadow-brand-green/40 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
+            <Button onClick={scrollToOffer} className="shadow-brand-purpleDark/40 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
               ⬇️ QUERO ACESSAR O APP AGORA
             </Button>
-            <p className="mt-3 text-xs text-blue-200 opacity-90 font-medium tracking-wide">
+            <p className="mt-3 text-xs text-purple-200 opacity-90 font-medium tracking-wide">
               🔒 Compra 100% segura • Acesso imediato
             </p>
           </div>
 
           {/* Feature Pills - Tight row */}
           <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-6 text-xs font-semibold text-white/90">
-            <div className="flex items-center gap-1.5 bg-blue-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
               <Smartphone className="w-3.5 h-3.5 text-brand-yellow" />
               <span className="whitespace-nowrap">Tudo no app</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-blue-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
               <FileText className="w-3.5 h-3.5 text-brand-yellow" />
               <span className="whitespace-nowrap">Sem bagunça</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-blue-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
+            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
               <Download className="w-3.5 h-3.5 text-brand-yellow" />
               <span className="whitespace-nowrap">Acesso rápido</span>
             </div>
@@ -103,7 +103,7 @@ const App: React.FC = () => {
             
             {/* Stat 1 */}
             <div className="flex flex-col items-center group">
-              <Users className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <Users className="w-10 h-10 md:w-12 md:h-12 text-brand-purple mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
                 Mais de <br className="md:hidden" /> 12.000
               </h3>
@@ -112,7 +112,7 @@ const App: React.FC = () => {
 
             {/* Stat 2 */}
             <div className="flex flex-col items-center group">
-              <BookOpen className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <BookOpen className="w-10 h-10 md:w-12 md:h-12 text-brand-purple mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
                 1500+
               </h3>
@@ -121,7 +121,7 @@ const App: React.FC = () => {
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center group">
-              <Star className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform fill-orange-500/10" />
+              <Star className="w-10 h-10 md:w-12 md:h-12 text-brand-yellow mb-3 md:mb-4 group-hover:scale-110 transition-transform fill-brand-yellow/20" />
               <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
                 4,9/5
               </h3>
@@ -130,7 +130,7 @@ const App: React.FC = () => {
 
             {/* Stat 4 */}
             <div className="flex flex-col items-center group">
-              <Download className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
+              <Download className="w-10 h-10 md:w-12 md:h-12 text-brand-purple mb-3 md:mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl md:text-4xl font-heading font-extrabold text-gray-900 mb-1">
                 100%
               </h3>
@@ -175,9 +175,9 @@ const App: React.FC = () => {
                </div>
             </div>
 
-            <div className="flex-1 bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-green-500/10 w-full relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-20 h-20 bg-green-500/5 rounded-bl-full -mr-4 -mt-4"></div>
-               <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider relative z-10">
+            <div className="flex-1 bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-brand-purple/10 w-full relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-20 h-20 bg-brand-purple/5 rounded-bl-full -mr-4 -mt-4"></div>
+               <div className="inline-block bg-purple-100 text-brand-purple px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider relative z-10">
                 A Solução
               </div>
               <h2 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-6 relative z-10">
@@ -185,19 +185,19 @@ const App: React.FC = () => {
               </h2>
                <div className="space-y-4 relative z-10">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Tudo centralizado no app</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Conteúdo organizado por fase</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Acesso imediato e vitalício</p>
                 </div>
                  <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Sempre à mão no celular</p>
                 </div>
               </div>
@@ -209,7 +209,7 @@ const App: React.FC = () => {
       {/* 4️⃣ HOW IT WORKS */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-16">
+           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-purple mb-16">
             📲 Como funciona o acesso ao aplicativo
           </h2>
           
@@ -217,8 +217,8 @@ const App: React.FC = () => {
             {HOW_IT_WORKS.map((step, idx) => (
               <div key={idx} className="relative group">
                 <div className="w-20 h-20 mx-auto bg-brand-yellow rounded-2xl rotate-3 group-hover:rotate-6 transition-transform flex items-center justify-center mb-6 shadow-md z-10 relative">
-                   <step.icon className="w-10 h-10 text-brand-blue -rotate-3 group-hover:-rotate-6 transition-transform" />
-                   <div className="absolute -top-3 -right-3 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold border-4 border-white shadow-sm">
+                   <step.icon className="w-10 h-10 text-brand-purple -rotate-3 group-hover:-rotate-6 transition-transform" />
+                   <div className="absolute -top-3 -right-3 w-8 h-8 bg-brand-purple text-white rounded-full flex items-center justify-center font-bold border-4 border-white shadow-sm">
                      {step.step}
                    </div>
                 </div>
@@ -227,7 +227,7 @@ const App: React.FC = () => {
                 
                 {/* Connector Line (Desktop) */}
                 {idx < HOW_IT_WORKS.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-1/2 w-full h-1 bg-dashed border-t-2 border-brand-lightBlue -z-0"></div>
+                  <div className="hidden lg:block absolute top-10 left-1/2 w-full h-1 bg-dashed border-t-2 border-brand-purpleLight -z-0"></div>
                 )}
               </div>
             ))}
@@ -236,7 +236,7 @@ const App: React.FC = () => {
       </section>
 
       {/* 5️⃣ APP CONTENT */}
-      <section className="py-20 bg-brand-lightBlue">
+      <section className="py-20 bg-brand-purpleLight">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4">
@@ -247,7 +247,7 @@ const App: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {APP_CONTENT.map((content: any, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-sm border border-blue-50 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+              <div key={idx} className="bg-white rounded-xl shadow-sm border border-purple-50 overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
                 {/* Image Container */}
                 <div className="h-40 md:h-48 w-full overflow-hidden bg-white relative">
                    {content.image ? (
@@ -257,20 +257,20 @@ const App: React.FC = () => {
                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                      />
                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-brand-blue">
+                      <div className="w-full h-full flex items-center justify-center bg-purple-50 text-brand-purple">
                          <content.icon className="w-12 h-12 opacity-50" />
                       </div>
                    )}
                 </div>
                 {/* Title Container */}
-                <div className="bg-brand-blue p-2 md:p-3 flex items-center justify-center flex-grow min-h-[3rem]">
+                <div className="bg-brand-purple p-2 md:p-3 flex items-center justify-center flex-grow min-h-[3rem]">
                    <h3 className="text-xs md:text-sm font-semibold text-white text-center leading-tight">{content.title}</h3>
                 </div>
               </div>
             ))}
             
             {/* "And much more" card */}
-            <div className="bg-brand-blue rounded-xl shadow-sm flex flex-col items-center justify-center text-center text-white transform hover:scale-105 transition-transform overflow-hidden min-h-[12rem] p-4">
+            <div className="bg-brand-purple rounded-xl shadow-sm flex flex-col items-center justify-center text-center text-white transform hover:scale-105 transition-transform overflow-hidden min-h-[12rem] p-4">
               <span className="text-2xl md:text-3xl font-bold mb-1">+1.400</span>
               <p className="font-medium text-xs md:text-sm opacity-90">Atividades disponíveis</p>
             </div>
@@ -282,14 +282,14 @@ const App: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
            <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-blue mb-4">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-purple mb-4">
               ❤️ Quem baixou o app, amou
             </h2>
           </div>
 
           <div className="max-w-4xl mx-auto w-full px-4 md:px-0">
              <iframe 
-               src="https://cozy-video-box.lovable.app/embed/25a5f57b-1fe7-42e9-b2bb-ada7c345bf8b?color=%230042c7&progress=%230042c7&controls=false&autoplay=false&loop=false" 
+               src="https://cozy-video-box.lovable.app/embed/25a5f57b-1fe7-42e9-b2bb-ada7c345bf8b?color=%239F21E3&progress=%239F21E3&controls=false&autoplay=false&loop=false" 
                width="100%" 
                height="450" 
                frameBorder="0" 
@@ -302,7 +302,7 @@ const App: React.FC = () => {
       </section>
 
       {/* 7️⃣ BONUS */}
-      <section className="py-20 bg-[#F0F7FF] overflow-hidden">
+      <section className="py-20 bg-[#F8F5FC] overflow-hidden">
         <div className="container mx-auto px-4">
            <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-2">
@@ -313,12 +313,12 @@ const App: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {BONUSES.map((bonus: any, idx) => (
-              <div key={idx} className="bg-white rounded-xl border border-blue-100 flex flex-col hover:shadow-md transition-shadow h-full overflow-hidden relative group">
+              <div key={idx} className="bg-white rounded-xl border border-purple-100 flex flex-col hover:shadow-md transition-shadow h-full overflow-hidden relative group">
                 
                 {/* Yellow Ribbon Header */}
                 <div className="absolute top-0 left-0 right-0 bg-brand-yellow py-3 px-3 z-10 flex items-center justify-center gap-2 shadow-sm">
-                  <Gift className="w-5 h-5 text-brand-blue flex-shrink-0" />
-                  <span className="font-heading font-bold text-brand-blue text-xs md:text-sm uppercase tracking-wide truncate">
+                  <Gift className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                  <span className="font-heading font-bold text-brand-purple text-xs md:text-sm uppercase tracking-wide truncate">
                     BÔNUS {idx + 1} - {bonus.title}
                   </span>
                 </div>
@@ -360,7 +360,7 @@ const App: React.FC = () => {
             
             {/* Header Badge */}
             <div className="bg-brand-yellow p-4 text-center">
-              <span className="font-heading font-bold text-brand-blue tracking-wide text-sm md:text-base">⭐ A MELHOR OFERTA PARA VOCÊ</span>
+              <span className="font-heading font-bold text-brand-purple tracking-wide text-sm md:text-base">⭐ A MELHOR OFERTA PARA VOCÊ</span>
             </div>
 
             <div className="p-6 md:p-12 text-center">
@@ -368,7 +368,7 @@ const App: React.FC = () => {
               <p className="text-gray-500 mb-8 text-sm md:text-base">+1.500 Atividades + Todos os Bônus</p>
 
               {/* Pricing Block Optimized for Conversion */}
-              <div className="flex flex-col items-center justify-center mb-8 bg-blue-50/50 p-6 rounded-2xl border border-blue-100 w-full max-w-sm mx-auto">
+              <div className="flex flex-col items-center justify-center mb-8 bg-purple-50/50 p-6 rounded-2xl border border-purple-100 w-full max-w-sm mx-auto">
                 {/* Anchor Price */}
                 <p className="text-gray-400 text-sm md:text-base font-medium mb-1">
                   De <span className="line-through decoration-red-500">R$ 197,00</span> por apenas:
@@ -378,12 +378,12 @@ const App: React.FC = () => {
                 <div className="flex flex-col items-center leading-none mb-3 mt-1">
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-xl md:text-2xl font-bold text-gray-700">4x de</span>
-                    <span className="text-5xl md:text-6xl font-extrabold text-green-600 tracking-tighter">R$ 9,25</span>
+                    <span className="text-5xl md:text-6xl font-extrabold text-brand-purple tracking-tighter">R$ 9,25</span>
                   </div>
                 </div>
 
                 {/* Cash Price */}
-                <p className="text-brand-blue font-bold text-lg md:text-xl border-t border-blue-200/50 w-full pt-3 mt-1">
+                <p className="text-brand-purple font-bold text-lg md:text-xl border-t border-purple-200/50 w-full pt-3 mt-1">
                   ou R$ 37,00 à vista
                 </p>
               </div>
@@ -412,7 +412,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <Button onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} fullWidth className="text-lg py-4 md:py-5 shadow-brand-green/50 animate-pulse">
+              <Button onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} fullWidth className="text-lg py-4 md:py-5 shadow-brand-purple/50 animate-pulse">
                 👉 SIM! QUERO ACESSAR O APP AGORA
               </Button>
               <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-[10px] md:text-xs">
@@ -440,7 +440,7 @@ const App: React.FC = () => {
       {/* 🔟 FAQ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-center text-brand-blue mb-12">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-center text-brand-purple mb-12">
             Perguntas Frequentes
           </h2>
           <Accordion items={FAQS} />
@@ -448,7 +448,7 @@ const App: React.FC = () => {
       </section>
 
       {/* 11️⃣ FOOTER */}
-      <footer className="bg-brand-blue text-white py-12 border-t border-white/10">
+      <footer className="bg-brand-purple text-white py-12 border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-8 text-sm opacity-90">
              <a href="#" className="hover:text-brand-yellow transition-colors">contato@seudominio.com</a>
@@ -459,10 +459,10 @@ const App: React.FC = () => {
                <ShieldCheck className="w-4 h-4" /> Site Seguro
              </span>
           </div>
-          <p className="text-xs md:text-sm text-blue-200">
+          <p className="text-xs md:text-sm text-purple-200">
             Copyright © 2026 EduKids App. Todos os direitos reservados.
           </p>
-          <p className="text-[10px] text-blue-300/50 mt-4 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[10px] text-purple-300/50 mt-4 max-w-2xl mx-auto leading-relaxed">
             Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Uma vez que você sai do Facebook, a responsabilidade não é deles e sim do nosso site.
           </p>
         </div>

@@ -80,11 +80,11 @@ export const SalesNotification: React.FC = () => {
       }`}
     >
       <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-4 flex items-center gap-4 relative overflow-hidden">
-        {/* Barra lateral verde para destaque */}
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-green"></div>
+        {/* Barra lateral roxa para destaque */}
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple"></div>
         
-        <div className="bg-green-100 rounded-full p-2 flex-shrink-0">
-          <CheckCircle2 className="w-6 h-6 text-brand-green" />
+        <div className="bg-purple-100 rounded-full p-2 flex-shrink-0">
+          <CheckCircle2 className="w-6 h-6 text-brand-purple" />
         </div>
         
         <div className="flex flex-col">
