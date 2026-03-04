@@ -32,27 +32,27 @@ const App: React.FC = () => {
       <SalesNotification />
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-brand-purple overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
+      <header className="relative bg-[#F5F3FF] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
         {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-          <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-white blur-xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-brand-yellow blur-2xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
+          <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-brand-purple/20 blur-xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-brand-yellow/30 blur-2xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-20 text-center text-white flex flex-col items-center">
+        <div className="container mx-auto px-4 relative z-20 text-center text-gray-900 flex flex-col items-center">
           
           {/* Top Badge - Urgency */}
-          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.6)] animate-pulse border-2 border-yellow-200">
+          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.4)] animate-pulse border-2 border-yellow-200">
             ⚠️ Restam Apenas 57 Acessos
           </div>
           
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4 max-w-4xl mx-auto">
             📱 1.500 ATIVIDADES INTERATIVAS <br className="hidden md:block"/>
-            <span className="text-brand-yellow">para reforçar e acelerar</span> o aprendizado
+            <span className="text-brand-purple">para reforçar e acelerar</span> o aprendizado
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-purple-50 max-w-2xl mx-auto mb-6 leading-relaxed">
-            Tenha acesso ao <strong className="text-brand-yellow font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Tenha acesso ao <strong className="text-brand-purple font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
           {/* Hero Image */}
@@ -63,26 +63,26 @@ const App: React.FC = () => {
           />
 
           <div className="flex flex-col items-center w-full">
-            <Button onClick={scrollToOffer} className="shadow-brand-purpleDark/40 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
+            <Button onClick={scrollToOffer} className="shadow-brand-purpleDark/20 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
               ⬇️ QUERO ACESSAR O APP AGORA
             </Button>
-            <p className="mt-3 text-xs text-purple-200 opacity-90 font-medium tracking-wide">
+            <p className="mt-3 text-xs text-gray-500 opacity-90 font-medium tracking-wide">
               🔒 Compra 100% segura • Acesso imediato
             </p>
           </div>
 
           {/* Feature Pills - Tight row */}
-          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-6 text-xs font-semibold text-white/90">
-            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
-              <Smartphone className="w-3.5 h-3.5 text-brand-yellow" />
+          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-6 text-xs font-semibold text-gray-600">
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
+              <Smartphone className="w-3.5 h-3.5 text-brand-purple" />
               <span className="whitespace-nowrap">Tudo no app</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
-              <FileText className="w-3.5 h-3.5 text-brand-yellow" />
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
+              <FileText className="w-3.5 h-3.5 text-brand-purple" />
               <span className="whitespace-nowrap">Sem bagunça</span>
             </div>
-            <div className="flex items-center gap-1.5 bg-purple-900/30 px-3 py-1.5 rounded-full border border-white/10 backdrop-blur-sm">
-              <Download className="w-3.5 h-3.5 text-brand-yellow" />
+            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
+              <Download className="w-3.5 h-3.5 text-brand-purple" />
               <span className="whitespace-nowrap">Acesso rápido</span>
             </div>
           </div>
