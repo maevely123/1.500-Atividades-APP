@@ -356,70 +356,123 @@ const App: React.FC = () => {
       {/* 8️⃣ OFFER SECTION */}
       <section id="offer" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-md md:max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-brand-yellow relative transform hover:scale-[1.01] transition-transform duration-500">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+              Escolha o melhor plano para você
+            </h2>
+            <p className="text-gray-600">Comece hoje mesmo a transformar o aprendizado do seu filho.</p>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-5xl mx-auto">
             
-            {/* Header Badge */}
-            <div className="bg-brand-yellow p-4 text-center">
-              <span className="font-heading font-bold text-brand-purple tracking-wide text-sm md:text-base">⭐ A MELHOR OFERTA PARA VOCÊ</span>
-            </div>
-
-            <div className="p-6 md:p-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Acesso Vitalício ao App</h3>
-              <p className="text-gray-500 mb-8 text-sm md:text-base">+1.500 Atividades + Todos os Bônus</p>
-
-              {/* Pricing Block Optimized for Conversion */}
-              <div className="flex flex-col items-center justify-center mb-8 bg-purple-50/50 p-6 rounded-2xl border border-purple-100 w-full max-w-sm mx-auto">
-                {/* Anchor Price */}
-                <p className="text-gray-400 text-sm md:text-base font-medium mb-1">
-                  De <span className="line-through decoration-red-500">R$ 197,00</span> por apenas:
-                </p>
-
-                {/* Hero Price (Installments) */}
-                <div className="flex flex-col items-center leading-none mb-3 mt-1">
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-xl md:text-2xl font-bold text-gray-700">4x de</span>
-                    <span className="text-5xl md:text-6xl font-extrabold text-brand-purple tracking-tighter">R$ 9,25</span>
-                  </div>
-                </div>
-
-                {/* Cash Price */}
-                <p className="text-brand-purple font-bold text-lg md:text-xl border-t border-purple-200/50 w-full pt-3 mt-1">
-                  ou R$ 37,00 à vista
-                </p>
-              </div>
-
-              <div className="space-y-3 mb-8 text-left max-w-xs mx-auto">
-                <div className="flex items-center gap-3 text-gray-700">
-                  <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
-                  <span className="text-sm font-medium">Acesso imediato ao App</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-700">
-                  <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
-                  <span className="text-sm font-medium">+1.500 Atividades PDF</span>
-                </div>
+            {/* BASIC OFFER CARD */}
+            <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative flex flex-col order-2 md:order-1">
+              <div className="p-6 md:p-8 flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Acesso Anual</h3>
+                <p className="text-gray-500 text-sm mb-6">Para quem quer começar agora</p>
                 
-                {/* Bonuses List */}
-                {BONUSES.map((bonus: any, idx: number) => (
-                  <div key={idx} className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
-                    <span className="text-sm font-medium">Bônus {idx + 1}: {bonus.title}</span>
-                  </div>
-                ))}
+                <div className="flex items-baseline gap-1 mb-6">
+                  <span className="text-sm text-gray-400">R$</span>
+                  <span className="text-4xl font-extrabold text-gray-900">19,90</span>
+                  <span className="text-sm text-gray-400">/ano</span>
+                </div>
 
-                <div className="flex items-center gap-3 text-gray-700">
-                  <div className="bg-green-100 rounded-full p-0.5"><Check className="w-3 h-3 text-green-600" /></div>
-                  <span className="text-sm font-medium">Garantia de 7 dias</span>
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <span className="text-sm">+1.500 Atividades PDF</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <span className="text-sm">Acesso Imediato</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <span className="text-sm">12 Meses de Acesso</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-400">
+                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                    <span className="text-sm line-through">Sem Bônus Exclusivos</span>
+                  </div>
+                   <div className="flex items-center gap-3 text-gray-400">
+                    <XCircle className="w-5 h-5 flex-shrink-0" />
+                    <span className="text-sm line-through">Sem Acesso Vitalício</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-6 pt-0 mt-auto">
+                <Button 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  variant="secondary" 
+                  fullWidth 
+                  className="border-2 border-brand-purple text-brand-purple hover:bg-purple-50"
+                >
+                  Começar com Básico
+                </Button>
+              </div>
+            </div>
+
+            {/* PREMIUM OFFER CARD */}
+            <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative transform md:-translate-y-4 md:scale-105 z-10 flex flex-col order-1 md:order-2">
+              
+              {/* Badge */}
+              <div className="bg-brand-yellow py-2 text-center">
+                <span className="text-brand-purpleDark font-bold text-xs uppercase tracking-wider">⭐ Mais Vendido • Melhor Custo-Benefício</span>
+              </div>
+
+              <div className="p-6 md:p-8 flex-grow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Acesso Vitalício</h3>
+                <p className="text-gray-500 text-sm mb-6">Completo + Bônus + Garantia</p>
+                
+                <div className="flex items-baseline gap-1 mb-2">
+                  <span className="text-sm text-gray-400">R$</span>
+                  <span className="text-5xl font-extrabold text-brand-purple">37,00</span>
+                  <span className="text-sm text-gray-400">/único</span>
+                </div>
+                <p className="text-xs text-green-600 font-bold bg-green-50 inline-block px-2 py-1 rounded mb-6">
+                  Economize com pagamento único
+                </p>
+
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <span className="text-sm font-bold">Tudo do plano básico</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <span className="text-sm font-bold">Acesso Vitalício (Para Sempre)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <span className="text-sm font-bold">Todos os Bônus Exclusivos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <span className="text-sm font-bold">Atualizações Gratuitas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <span className="text-sm font-bold">Garantia de 7 Dias</span>
+                  </div>
                 </div>
               </div>
 
-              <Button onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} fullWidth className="text-lg py-4 md:py-5 shadow-brand-purple/50 animate-pulse">
-                👉 SIM! QUERO ACESSAR O APP AGORA
-              </Button>
-              <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-[10px] md:text-xs">
-                <ShieldCheck className="w-3 h-3 md:w-4 md:h-4" />
-                <span>Pagamento Processado com Segurança</span>
+              <div className="p-6 pt-0 mt-auto">
+                <Button 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  fullWidth 
+                  className="py-4 text-lg shadow-brand-purple/40 animate-pulse"
+                >
+                  QUERO ACESSO COMPLETO
+                </Button>
+                <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-[10px]">
+                  <ShieldCheck className="w-3 h-3" />
+                  <span>Pagamento 100% Seguro</span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
