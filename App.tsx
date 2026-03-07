@@ -367,138 +367,191 @@ const App: React.FC = () => {
       </section>
 
       {/* 8️⃣ OFFER SECTION */}
-      <section id="offer" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Escolha o melhor plano para você
+      <section id="offer" className="py-24 bg-gradient-to-b from-purple-50 via-white to-purple-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-brand-green/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="inline-block bg-brand-purple/10 text-brand-purple px-4 py-1.5 rounded-full text-sm font-bold mb-6 uppercase tracking-wider">
+              Oferta por Tempo Limitado
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 mb-6 leading-tight">
+              Invista no Futuro do Seu Filho <br className="hidden md:block" />
+              <span className="text-brand-purple">Por Menos de Uma Pizza</span>
             </h2>
-            <p className="text-gray-600">Comece hoje mesmo a transformar o aprendizado do seu filho.</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Garanta acesso imediato a todo o material e comece a transformar o aprendizado hoje mesmo. Escolha o plano ideal para sua família.
+            </p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-stretch max-w-6xl mx-auto">
             
             {/* BASIC OFFER CARD */}
-            <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative flex flex-col">
-              <div className="p-6 md:p-8 flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Acesso Anual</h3>
-                <p className="text-gray-500 text-sm mb-6">Para quem quer começar agora</p>
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden relative flex flex-col hover:shadow-2xl transition-shadow duration-300">
+              <div className="p-8 flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Acesso Anual</h3>
+                    <p className="text-gray-500 text-sm mt-1">Ideal para testar o material</p>
+                  </div>
+                  <div className="bg-gray-100 p-2 rounded-lg">
+                    <Clock className="w-6 h-6 text-gray-400" />
+                  </div>
+                </div>
                 
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-sm text-gray-400">R$</span>
-                  <span className="text-4xl font-extrabold text-gray-900">19,90</span>
-                  <span className="text-sm text-gray-400">/ano</span>
+                <div className="flex items-baseline gap-1 mb-8 border-b border-gray-100 pb-8">
+                  <span className="text-sm text-gray-400 font-medium">R$</span>
+                  <span className="text-5xl font-extrabold text-gray-900">19,90</span>
+                  <span className="text-sm text-gray-400 font-medium">/ano</span>
                 </div>
 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-4">
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
-                    <span className="text-sm">+1.500 Atividades PDF</span>
+                    <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
+                    <span className="text-sm font-medium">+1.500 Atividades PDF</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
-                    <span className="text-sm">Acesso Imediato</span>
+                    <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
+                    <span className="text-sm font-medium">Acesso Imediato</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
-                    <span className="text-sm">12 Meses de Acesso</span>
+                    <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
+                    <span className="text-sm font-medium">12 Meses de Acesso</span>
                   </div>
-                  <div className="flex items-center gap-3 text-gray-400">
+                  <div className="flex items-center gap-3 text-gray-400 opacity-60">
                     <XCircle className="w-5 h-5 flex-shrink-0" />
                     <span className="text-sm line-through">Sem Bônus Exclusivos</span>
                   </div>
-                   <div className="flex items-center gap-3 text-gray-400">
+                   <div className="flex items-center gap-3 text-gray-400 opacity-60">
                     <XCircle className="w-5 h-5 flex-shrink-0" />
                     <span className="text-sm line-through">Sem Acesso Vitalício</span>
                   </div>
                 </div>
               </div>
               
-              <div className="p-6 pt-0 mt-auto">
+              <div className="p-8 pt-0 mt-auto bg-gray-50/50">
                 <Button 
                   onClick={() => setShowUpsell(true)} 
                   variant="secondary" 
                   fullWidth 
-                  className="border-2 border-brand-green text-brand-green hover:bg-green-50"
+                  className="py-4 bg-white border-2 border-gray-200 text-gray-700 hover:border-brand-green hover:text-brand-green hover:bg-green-50 transition-all font-bold"
                 >
                   Começar com Básico
                 </Button>
+                <p className="text-center text-xs text-gray-400 mt-4">Renovação anual automática. Cancele quando quiser.</p>
               </div>
             </div>
 
             {/* PREMIUM OFFER CARD */}
-            <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative transform md:-translate-y-4 md:scale-105 z-10 flex flex-col">
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative flex flex-col transform lg:-translate-y-6 lg:scale-105 z-20 ring-4 ring-brand-yellow/20">
               
               {/* Badge */}
-              <div className="bg-brand-yellow py-2 text-center">
-                <span className="text-brand-purpleDark font-bold text-xs uppercase tracking-wider">⭐ Mais Vendido • Melhor Custo-Benefício</span>
+              <div className="bg-gradient-to-r from-brand-yellow to-yellow-400 py-3 text-center shadow-md relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full bg-white/20 animate-pulse-slow"></div>
+                <span className="text-brand-purpleDark font-extrabold text-sm uppercase tracking-widest flex items-center justify-center gap-2 relative z-10">
+                  <Star className="w-4 h-4 fill-brand-purpleDark" />
+                  Mais Vendido • Melhor Escolha
+                  <Star className="w-4 h-4 fill-brand-purpleDark" />
+                </span>
               </div>
 
-              <div className="p-6 md:p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-brand-green mb-2">Acesso Vitalício</h3>
-                <p className="text-gray-500 text-sm mb-6">Completo + Bônus + Garantia</p>
-                
-                <div className="flex items-baseline gap-1 mb-2">
-                  <span className="text-sm text-gray-400">R$</span>
-                  <span className="text-5xl font-extrabold text-brand-green">37,00</span>
-                  <span className="text-sm text-gray-400">/único</span>
+              <div className="p-8 flex-grow bg-gradient-to-b from-yellow-50/30 to-transparent">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <h3 className="text-3xl font-bold text-brand-green">Acesso Vitalício</h3>
+                    <p className="text-gray-500 text-sm mt-1 font-medium">Completo + Bônus + Garantia</p>
+                  </div>
+                  <div className="bg-brand-green/10 p-2 rounded-lg">
+                    <Gift className="w-8 h-8 text-brand-green" />
+                  </div>
                 </div>
-                <p className="text-xs text-green-600 font-bold bg-green-50 inline-block px-2 py-1 rounded mb-6">
-                  Economize com pagamento único
-                </p>
+                
+                <div className="mb-8 border-b border-dashed border-brand-green/20 pb-8 mt-6">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-gray-400 line-through text-lg">R$ 97,00</span>
+                    <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">-62% OFF</span>
+                  </div>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-sm text-gray-500 font-medium self-start mt-2">R$</span>
+                    <span className="text-6xl font-extrabold text-brand-green tracking-tight">37,00</span>
+                    <span className="text-sm text-gray-500 font-medium self-end mb-2">/único</span>
+                  </div>
+                  <p className="text-xs text-brand-green font-bold mt-2 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Pagamento único, sem mensalidades
+                  </p>
+                </div>
 
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-bold">Acesso Imediato</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-bold">Tudo do plano básico</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-gray-800 bg-white p-2 rounded-lg shadow-sm border border-gray-100">
+                    <div className="bg-brand-green p-1 rounded-full"><Check className="w-4 h-4 text-white" /></div>
                     <span className="text-sm font-bold">Acesso Vitalício (Para Sempre)</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-bold">Todos os Bônus Exclusivos</span>
+                    <span className="text-sm font-medium">Acesso Imediato a Tudo</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
+                    <span className="text-sm font-medium">Todos os Bônus Exclusivos</span>
                   </div>
                   
                   {/* Detailed Bonus List */}
-                  {BONUSES.map((bonus: any, idx: number) => (
-                    <div key={idx} className="flex items-center gap-3 text-gray-700">
-                       <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                       <span className="text-sm font-bold">Bônus {idx + 1} - {bonus.title}</span>
-                    </div>
-                  ))}
+                  <div className="pl-2 border-l-2 border-brand-yellow/30 ml-2 space-y-3 py-1">
+                    {BONUSES.map((bonus: any, idx: number) => (
+                      <div key={idx} className="flex items-center gap-3 text-gray-600">
+                         <div className="bg-brand-yellow/20 p-1 rounded-full"><Star className="w-3 h-3 text-brand-yellow fill-brand-yellow" /></div>
+                         <span className="text-xs font-bold text-gray-700">Bônus: {bonus.title}</span>
+                      </div>
+                    ))}
+                  </div>
 
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-bold">Atualizações Gratuitas</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-bold">Garantia de 7 Dias</span>
+                    <span className="text-sm font-medium">Atualizações Gratuitas</span>
                   </div>
                 </div>
               </div>
-
-              <div className="p-6 pt-0 mt-auto">
+              
+              <div className="p-8 pt-0 mt-auto">
                 <Button 
                   onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
                   fullWidth 
-                  className="py-4 text-lg shadow-brand-green/40 animate-pulse"
+                  className="py-5 text-xl shadow-xl shadow-brand-green/30 animate-pulse hover:scale-[1.02] transition-transform bg-brand-green hover:bg-green-600 border-none"
                 >
-                  QUERO ACESSO COMPLETO
+                  QUERO ACESSO VITALÍCIO
                 </Button>
-                <div className="mt-4 flex items-center justify-center gap-2 text-gray-400 text-[10px]">
-                  <ShieldCheck className="w-3 h-3" />
-                  <span>Pagamento 100% Seguro</span>
+                
+                <div className="mt-6 grid grid-cols-2 gap-4 text-center">
+                  <div className="flex flex-col items-center justify-center p-2 bg-gray-50 rounded-lg">
+                    <ShieldCheck className="w-5 h-5 text-brand-green mb-1" />
+                    <span className="text-[10px] text-gray-500 font-medium">Garantia de 7 Dias</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center p-2 bg-gray-50 rounded-lg">
+                    <div className="flex -space-x-2 mb-1">
+                      <div className="w-5 h-5 rounded-full bg-gray-200 border border-white"></div>
+                      <div className="w-5 h-5 rounded-full bg-gray-300 border border-white"></div>
+                      <div className="w-5 h-5 rounded-full bg-gray-400 border border-white"></div>
+                    </div>
+                    <span className="text-[10px] text-gray-500 font-medium">+12.000 Alunos</span>
+                  </div>
                 </div>
               </div>
             </div>
 
+          </div>
+          
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="h-4 opacity-60" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" className="h-4 opacity-60" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png" alt="PayPal" className="h-4 opacity-60" />
+              <img src="https://logopng.com.br/logos/pix-106.png" alt="Pix" className="h-4 opacity-60" />
+              <span className="text-xs text-gray-400 ml-2 border-l border-gray-200 pl-2">Pagamento Seguro</span>
+            </div>
           </div>
         </div>
       </section>
