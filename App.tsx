@@ -596,37 +596,64 @@ const App: React.FC = () => {
 
             <div className="bg-brand-yellow p-4 text-center relative">
               <span className="font-heading font-bold text-brand-purpleDark text-lg uppercase tracking-wide">
-                ✋ ESPERE! OFERTA ESPECIAL
+                🎁 PRESENTE EXCLUSIVO PARA VOCÊ!
               </span>
             </div>
 
             <div className="p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Leve o Acesso Vitalício + Bônus
-              </h3>
-              <p className="text-gray-600 mb-6 text-sm">
-                Por uma diferença mínima, você garante acesso para sempre e todos os bônus exclusivos!
+              <p className="text-gray-700 mb-6 text-base font-medium leading-relaxed">
+                Vimos o seu interesse nos materiais e como agradecimento abrimos uma exceção para você levar o <span className="font-bold text-brand-purple">Plano Premium</span> por um preço menor!
               </p>
 
-              <div className="bg-purple-50 rounded-xl p-4 mb-6 border border-purple-100 relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-brand-green text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">OFERTA ÚNICA</div>
+              <div className="bg-purple-50 rounded-xl p-4 mb-6 border border-purple-100 relative overflow-hidden shadow-inner">
+                <div className="absolute top-0 right-0 bg-brand-green text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg shadow-sm">OFERTA ÚNICA</div>
                 <p className="text-sm text-gray-500 mb-1">De <span className="line-through decoration-red-500">R$ 37,00</span> por apenas:</p>
-                <p className="text-4xl font-extrabold text-brand-green tracking-tight">R$ 29,90</p>
+                <div className="flex items-center justify-center gap-2">
+                   <span className="text-4xl font-extrabold text-brand-green tracking-tight">R$ 29,90</span>
+                </div>
                 <p className="text-xs text-brand-purple font-bold mt-1">Pagamento Único • Acesso Vitalício</p>
+              </div>
+
+              {/* List of benefits */}
+              <div className="space-y-2 text-left mb-6 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm font-bold text-gray-800">Acesso Vitalício (Para Sempre)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm text-gray-600">+1.500 Atividades Lúdicas</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm text-gray-600">Todos os Bônus Exclusivos</span>
+                  </div>
+                   <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm text-gray-600">Acesso Imediato a Tudo</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm text-gray-600">Atualizações Gratuitas</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-brand-green flex-shrink-0" />
+                    <span className="text-sm text-gray-600">Garantia de 7 Dias</span>
+                  </div>
               </div>
 
               <div className="space-y-3">
                 <Button 
                   onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
                   fullWidth 
-                  className="py-4 text-lg shadow-brand-green/30 animate-pulse bg-brand-green hover:bg-green-600 text-white"
+                  className="py-4 text-lg shadow-brand-green/30 animate-pulse bg-brand-green hover:bg-green-600 text-white shadow-lg transform hover:scale-105 transition-all"
                 >
                   SIM! QUERO POR R$ 29,90
                 </Button>
                 
                 <button 
                   onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"}
-                  className="text-sm text-gray-400 hover:text-gray-600 underline decoration-gray-300 underline-offset-2 transition-colors"
+                  className="w-full py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-bold hover:bg-gray-50 hover:border-gray-300 transition-all"
                 >
                   Não obrigado, eu vou querer o básico
                 </button>
