@@ -79,23 +79,24 @@ export const SalesNotification: React.FC = () => {
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'
       }`}
     >
-      <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-4 flex items-center gap-4 relative overflow-hidden">
-        {/* Barra lateral roxa para destaque */}
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple"></div>
+      <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-2.5 flex items-center gap-3 relative overflow-hidden">
+        {/* Barra lateral verde para destaque */}
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-green"></div>
         
-        <div className="bg-purple-100 rounded-full p-2 flex-shrink-0">
-          <CheckCircle2 className="w-6 h-6 text-brand-purple" />
+        <div className="bg-green-50 rounded-full p-1.5 flex-shrink-0">
+          <CheckCircle2 className="w-4 h-4 text-brand-green" />
         </div>
         
-        <div className="flex flex-col">
-          <p className="text-xs text-gray-500 font-medium mb-0.5">Alguém acabou de comprar!</p>
-          <p className="text-sm font-bold text-gray-800 leading-tight">
-            {buyer.name}
-          </p>
-          <div className="flex items-center gap-1 mt-1">
-             <MapPin className="w-3 h-3 text-gray-400" />
-             <span className="text-[10px] text-gray-500">{buyer.location}</span>
+        <div className="flex flex-col justify-center">
+          <div className="flex items-baseline gap-1">
+            <p className="text-xs font-bold text-gray-900 leading-tight">
+              {buyer.name}
+            </p>
+            <span className="text-[10px] text-gray-400">• {buyer.location.split(',')[0]}</span>
           </div>
+          <p className="text-xs text-green-600 font-bold leading-tight mt-0.5">
+            Garantiu o acesso ao App! 🚀
+          </p>
         </div>
       </div>
     </div>
