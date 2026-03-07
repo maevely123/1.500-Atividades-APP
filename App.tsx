@@ -32,9 +32,9 @@ const App: React.FC = () => {
       <SalesNotification />
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-[#F5F3FF] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
+      <header className="relative bg-gradient-to-b from-[#F3E8FF] to-[#E9D5FF] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
         {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-50 pointer-events-none">
           <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-brand-purple/20 blur-xl"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-brand-yellow/30 blur-2xl"></div>
         </div>
@@ -51,7 +51,7 @@ const App: React.FC = () => {
             <span className="text-brand-purple">para reforçar e acelerar</span> o aprendizado
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-6 leading-relaxed">
             Tenha acesso ao <strong className="text-brand-purple font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
@@ -63,7 +63,7 @@ const App: React.FC = () => {
           />
 
           <div className="flex flex-col items-center w-full">
-            <Button onClick={scrollToOffer} className="shadow-brand-purpleDark/20 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
+            <Button onClick={scrollToOffer} className="shadow-brand-green/20 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
               ⬇️ QUERO ACESSAR O APP AGORA
             </Button>
             <p className="mt-3 text-xs text-gray-500 opacity-90 font-medium tracking-wide">
@@ -175,9 +175,9 @@ const App: React.FC = () => {
                </div>
             </div>
 
-            <div className="flex-1 bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-brand-purple/10 w-full relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-20 h-20 bg-brand-purple/5 rounded-bl-full -mr-4 -mt-4"></div>
-               <div className="inline-block bg-purple-100 text-brand-purple px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider relative z-10">
+            <div className="flex-1 bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-brand-green/10 w-full relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-20 h-20 bg-brand-green/5 rounded-bl-full -mr-4 -mt-4"></div>
+               <div className="inline-block bg-green-100 text-brand-green px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-wider relative z-10">
                 A Solução
               </div>
               <h2 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-6 relative z-10">
@@ -185,19 +185,19 @@ const App: React.FC = () => {
               </h2>
                <div className="space-y-4 relative z-10">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Tudo centralizado no app</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Conteúdo organizado por fase</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Acesso imediato e vitalício</p>
                 </div>
                  <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" />
                   <p className="text-sm font-medium text-gray-800">Sempre à mão no celular</p>
                 </div>
               </div>
@@ -317,8 +317,8 @@ const App: React.FC = () => {
                 
                 {/* Yellow Ribbon Header */}
                 <div className="absolute top-0 left-0 right-0 bg-brand-yellow py-3 px-3 z-10 flex items-center justify-center gap-2 shadow-sm">
-                  <Gift className="w-5 h-5 text-brand-purple flex-shrink-0" />
-                  <span className="font-heading font-bold text-brand-purple text-xs md:text-sm uppercase tracking-wide truncate">
+                  <Gift className="w-5 h-5 text-gray-900 flex-shrink-0" />
+                  <span className="font-heading font-bold text-gray-900 text-xs md:text-sm uppercase tracking-wide truncate">
                     BÔNUS {idx + 1} - {bonus.title}
                   </span>
                 </div>
@@ -366,7 +366,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-5xl mx-auto">
             
             {/* BASIC OFFER CARD */}
-            <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative flex flex-col order-2 md:order-1">
+            <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative flex flex-col">
               <div className="p-6 md:p-8 flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Acesso Anual</h3>
                 <p className="text-gray-500 text-sm mb-6">Para quem quer começar agora</p>
@@ -379,15 +379,15 @@ const App: React.FC = () => {
 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
                     <span className="text-sm">+1.500 Atividades PDF</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
                     <span className="text-sm">Acesso Imediato</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle2 className="w-5 h-5 text-brand-purple flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-green flex-shrink-0" />
                     <span className="text-sm">12 Meses de Acesso</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
@@ -406,7 +406,7 @@ const App: React.FC = () => {
                   onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
                   variant="secondary" 
                   fullWidth 
-                  className="border-2 border-brand-purple text-brand-purple hover:bg-purple-50"
+                  className="border-2 border-brand-green text-brand-green hover:bg-green-50"
                 >
                   Começar com Básico
                 </Button>
@@ -414,7 +414,7 @@ const App: React.FC = () => {
             </div>
 
             {/* PREMIUM OFFER CARD */}
-            <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative transform md:-translate-y-4 md:scale-105 z-10 flex flex-col order-1 md:order-2">
+            <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative transform md:-translate-y-4 md:scale-105 z-10 flex flex-col">
               
               {/* Badge */}
               <div className="bg-brand-yellow py-2 text-center">
@@ -422,12 +422,12 @@ const App: React.FC = () => {
               </div>
 
               <div className="p-6 md:p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-brand-purple mb-2">Acesso Vitalício</h3>
+                <h3 className="text-2xl font-bold text-brand-green mb-2">Acesso Vitalício</h3>
                 <p className="text-gray-500 text-sm mb-6">Completo + Bônus + Garantia</p>
                 
                 <div className="flex items-baseline gap-1 mb-2">
                   <span className="text-sm text-gray-400">R$</span>
-                  <span className="text-5xl font-extrabold text-brand-purple">37,00</span>
+                  <span className="text-5xl font-extrabold text-brand-green">37,00</span>
                   <span className="text-sm text-gray-400">/único</span>
                 </div>
                 <p className="text-xs text-green-600 font-bold bg-green-50 inline-block px-2 py-1 rounded mb-6">
@@ -436,23 +436,23 @@ const App: React.FC = () => {
 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-bold">Tudo do plano básico</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-bold">Acesso Vitalício (Para Sempre)</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-bold">Todos os Bônus Exclusivos</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-bold">Atualizações Gratuitas</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
-                    <div className="bg-brand-purple/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-purple" /></div>
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-bold">Garantia de 7 Dias</span>
                   </div>
                 </div>
@@ -462,7 +462,7 @@ const App: React.FC = () => {
                 <Button 
                   onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
                   fullWidth 
-                  className="py-4 text-lg shadow-brand-purple/40 animate-pulse"
+                  className="py-4 text-lg shadow-brand-green/40 animate-pulse"
                 >
                   QUERO ACESSO COMPLETO
                 </Button>

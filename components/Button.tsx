@@ -19,8 +19,8 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center font-heading font-bold uppercase tracking-wide transition-all duration-300 rounded-full shadow-[0_4px_0_rgba(0,0,0,0.15)] active:translate-y-1 active:shadow-none focus:outline-none focus:ring-4";
   
   const variants = {
-    primary: "bg-brand-purple hover:bg-brand-purpleDark text-white focus:ring-brand-purple/50",
-    secondary: "bg-white text-brand-purple hover:bg-purple-50 focus:ring-white/50",
+    primary: "bg-brand-green hover:bg-green-600 text-white focus:ring-brand-green/50",
+    secondary: "bg-white text-brand-green hover:bg-green-50 focus:ring-white/50",
     outline: "border-2 border-white text-white hover:bg-white/10 focus:ring-white/50 shadow-none",
     danger: "bg-brand-red text-white hover:bg-red-600 focus:ring-red-300"
   };
