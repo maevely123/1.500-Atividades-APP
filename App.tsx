@@ -147,7 +147,7 @@ const App: React.FC = () => {
             <img 
               src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1772847267/Gemini_Generated_Image_95m0mu95m0mu95m0_e68tro.png" 
               alt="Crianças se divertindo e aprendendo" 
-              className="w-full max-w-4xl h-auto object-contain mx-auto"
+              className="w-full max-w-4xl h-auto object-contain mx-auto rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
             />
           </div>
 
@@ -379,37 +379,36 @@ const App: React.FC = () => {
             <div className="inline-block bg-brand-purple/10 text-brand-purple px-4 py-1.5 rounded-full text-sm font-bold mb-6 uppercase tracking-wider">
               Oferta por Tempo Limitado
             </div>
-            <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 mb-6 leading-tight">
-              Invista no Futuro do Seu Filho <br className="hidden md:block" />
+            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-gray-900 mb-6 leading-tight">
+              Invista no Futuro do Seu Filho ou Aluno <br className="hidden md:block" />
               <span className="text-brand-purple">Por Menos de Uma Pizza</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Garanta acesso imediato a todo o material e comece a transformar o aprendizado hoje mesmo. Escolha o plano ideal para sua família.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+              <span className="bg-yellow-100 px-2 py-1 rounded-md text-gray-900 font-bold">Escolha o plano ideal</span> e <span className="bg-green-100 px-2 py-1 rounded-md text-gray-900 font-bold">Garanta acesso imediato</span> a todo o material.
             </p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8 justify-center items-center lg:items-stretch max-w-6xl mx-auto">
             
             {/* BASIC OFFER CARD */}
-            <div className="w-full max-w-md bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden relative flex flex-col hover:shadow-2xl transition-shadow duration-300">
-              <div className="p-8 flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">Acesso Anual</h3>
-                    <p className="text-gray-500 text-sm mt-1">Ideal para testar o material</p>
-                  </div>
-                  <div className="bg-gray-100 p-2 rounded-lg">
-                    <Clock className="w-6 h-6 text-gray-400" />
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-xl border-2 border-gray-100 overflow-hidden relative flex flex-col hover:shadow-2xl hover:border-brand-purple/30 transition-all duration-300 group">
+              <div className="p-8 flex-grow flex flex-col items-center text-center">
+                <div className="mb-4 w-full flex justify-center">
+                  <div className="bg-gray-100 p-3 rounded-2xl group-hover:bg-brand-purple/10 transition-colors">
+                    <Clock className="w-8 h-8 text-gray-400 group-hover:text-brand-purple transition-colors" />
                   </div>
                 </div>
                 
-                <div className="flex items-baseline gap-1 mb-8 border-b border-gray-100 pb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">Oferta Básica</h3>
+                <p className="text-gray-500 text-sm mb-6">Ideal para testar o material</p>
+                
+                <div className="flex items-baseline gap-1 mb-8 border-b border-gray-100 pb-8 w-full justify-center">
                   <span className="text-sm text-gray-400 font-medium">R$</span>
                   <span className="text-5xl font-extrabold text-gray-900">19,90</span>
                   <span className="text-sm text-gray-400 font-medium">/ano</span>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 w-full text-left">
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
                     <span className="text-sm font-medium">+1.500 Atividades PDF</span>
@@ -447,7 +446,7 @@ const App: React.FC = () => {
             </div>
 
             {/* PREMIUM OFFER CARD */}
-            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative flex flex-col transform lg:-translate-y-6 lg:scale-105 z-20 ring-4 ring-brand-yellow/20">
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border-2 border-brand-yellow overflow-hidden relative flex flex-col transform lg:-translate-y-6 lg:scale-105 z-20 ring-4 ring-brand-yellow/20 hover:ring-brand-yellow/40 transition-all duration-300">
               
               {/* Badge */}
               <div className="bg-gradient-to-r from-brand-yellow to-yellow-400 py-3 text-center shadow-md relative overflow-hidden">
@@ -459,33 +458,32 @@ const App: React.FC = () => {
                 </span>
               </div>
 
-              <div className="p-8 flex-grow bg-gradient-to-b from-yellow-50/30 to-transparent">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-3xl font-bold text-brand-green">Acesso Vitalício</h3>
-                    <p className="text-gray-500 text-sm mt-1 font-medium">Completo + Bônus + Garantia</p>
-                  </div>
-                  <div className="bg-brand-green/10 p-2 rounded-lg">
+              <div className="p-8 flex-grow bg-gradient-to-b from-yellow-50/30 to-transparent flex flex-col items-center text-center">
+                <div className="mb-4 w-full flex justify-center">
+                  <div className="bg-brand-green/10 p-3 rounded-2xl animate-bounce-slow">
                     <Gift className="w-8 h-8 text-brand-green" />
                   </div>
                 </div>
+
+                <h3 className="text-3xl font-bold text-brand-green mb-1">Oferta Premium</h3>
+                <p className="text-gray-500 text-sm mb-6 font-medium">Completo + Bônus + Garantia</p>
                 
-                <div className="mb-8 border-b border-dashed border-brand-green/20 pb-8 mt-6">
-                  <div className="flex items-center gap-2 mb-1">
+                <div className="mb-8 border-b border-dashed border-brand-green/20 pb-8 mt-2 w-full">
+                  <div className="flex items-center justify-center gap-2 mb-1">
                     <span className="text-gray-400 line-through text-lg">R$ 97,00</span>
-                    <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full">-62% OFF</span>
+                    <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded-full animate-pulse">-62% OFF</span>
                   </div>
-                  <div className="flex items-baseline gap-1">
+                  <div className="flex items-baseline justify-center gap-1">
                     <span className="text-sm text-gray-500 font-medium self-start mt-2">R$</span>
                     <span className="text-6xl font-extrabold text-brand-green tracking-tight">37,00</span>
                     <span className="text-sm text-gray-500 font-medium self-end mb-2">/único</span>
                   </div>
-                  <p className="text-xs text-brand-green font-bold mt-2 flex items-center gap-1">
+                  <p className="text-xs text-brand-green font-bold mt-2 flex items-center justify-center gap-1">
                     <CheckCircle2 className="w-3 h-3" /> Pagamento único, sem mensalidades
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 w-full text-left">
                   <div className="flex items-center gap-3 text-gray-800 bg-white p-2 rounded-lg shadow-sm border border-gray-100">
                     <div className="bg-brand-green p-1 rounded-full"><Check className="w-4 h-4 text-white" /></div>
                     <span className="text-sm font-bold">Acesso Vitalício (Para Sempre)</span>
@@ -545,12 +543,12 @@ const App: React.FC = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="h-4 opacity-60" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" className="h-4 opacity-60" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png" alt="PayPal" className="h-4 opacity-60" />
-              <img src="https://logopng.com.br/logos/pix-106.png" alt="Pix" className="h-4 opacity-60" />
-              <span className="text-xs text-gray-400 ml-2 border-l border-gray-200 pl-2">Pagamento Seguro</span>
+            <div className="inline-flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-md border border-gray-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-6 opacity-80" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 opacity-80" />
+              <img src="https://logopng.com.br/logos/mercado-pago-77.png" alt="Mercado Pago" className="h-6 opacity-80" />
+              <img src="https://logopng.com.br/logos/pix-106.png" alt="Pix" className="h-6 opacity-80" />
+              <span className="text-xs text-gray-400 ml-2 border-l border-gray-200 pl-4 font-medium">Pagamento 100% Seguro</span>
             </div>
           </div>
         </div>
@@ -636,10 +634,6 @@ const App: React.FC = () => {
       <footer className="bg-brand-purple text-white py-12 border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-8 text-sm opacity-90">
-             <a href="#" className="hover:text-brand-yellow transition-colors">contato@seudominio.com</a>
-             <span className="hidden md:inline">•</span>
-             <a href="#" className="hover:text-brand-yellow transition-colors">WhatsApp Suporte</a>
-             <span className="hidden md:inline">•</span>
              <span className="flex items-center justify-center gap-1">
                <ShieldCheck className="w-4 h-4" /> Site Seguro
              </span>
