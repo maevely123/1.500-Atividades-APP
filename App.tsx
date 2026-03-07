@@ -367,7 +367,7 @@ const App: React.FC = () => {
       </section>
 
       {/* 8️⃣ OFFER SECTION */}
-      <section id="offer" className="py-24 bg-gradient-to-b from-purple-50 via-white to-purple-50 relative overflow-hidden">
+      <section id="offer" className="py-16 bg-gradient-to-b from-purple-50 via-white to-purple-50 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl"></div>
@@ -411,7 +411,7 @@ const App: React.FC = () => {
                 <div className="space-y-4 w-full text-left">
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
-                    <span className="text-sm font-medium">+1.500 Atividades PDF</span>
+                    <span className="text-sm font-medium">+1.500 Atividades Lúdicas</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-gray-100 p-1 rounded-full"><Check className="w-4 h-4 text-gray-600" /></div>
@@ -441,7 +441,11 @@ const App: React.FC = () => {
                 >
                   Começar com Básico
                 </Button>
-                <p className="text-center text-xs text-gray-400 mt-4">Renovação anual automática. Cancele quando quiser.</p>
+                <div className="mt-4 text-center">
+                  <p className="text-xs font-bold text-brand-purple animate-pulse flex items-center justify-center gap-1">
+                    <span>⚠️</span> Veja a oferta abaixo, é melhor! <span>👇</span>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -552,16 +556,6 @@ const App: React.FC = () => {
               </div>
             </div>
 
-          </div>
-          
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-4 bg-white px-6 py-3 rounded-full shadow-md border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-6 opacity-80" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 opacity-80" />
-              <img src="https://logopng.com.br/logos/mercado-pago-77.png" alt="Mercado Pago" className="h-6 opacity-80" />
-              <img src="https://logopng.com.br/logos/pix-106.png" alt="Pix" className="h-6 opacity-80" />
-              <span className="text-xs text-gray-400 ml-2 border-l border-gray-200 pl-4 font-medium">Pagamento 100% Seguro</span>
-            </div>
           </div>
         </div>
       </section>
