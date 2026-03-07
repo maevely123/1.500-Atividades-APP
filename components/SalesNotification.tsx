@@ -55,17 +55,17 @@ export const SalesNotification: React.FC = () => {
       setTimeout(() => setIsVisible(false), 4000); // Fica visível por 4s
     }, 2000);
 
-    // Ciclo a cada 8 segundos (incluindo o tempo de exibição)
+    // Ciclo a cada 10 segundos (incluindo o tempo de exibição)
     const interval = setInterval(() => {
       setBuyer(generateBuyer());
       setIsVisible(true);
       
-      // Esconde após 4 segundos (ficando 4s oculto até completar os 8s do intervalo)
+      // Esconde após 4 segundos (ficando 6s oculto até completar os 10s do intervalo)
       setTimeout(() => {
         setIsVisible(false);
       }, 4000);
 
-    }, 8000);
+    }, 10000);
 
     return () => {
       clearTimeout(initialTimeout);
