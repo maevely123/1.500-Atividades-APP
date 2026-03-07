@@ -141,6 +141,16 @@ const App: React.FC = () => {
             </div>
 
           </div>
+
+          {/* Featured Image */}
+          <div className="mt-12 flex justify-center w-full">
+            <img 
+              src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1772847267/Gemini_Generated_Image_95m0mu95m0mu95m0_e68tro.png" 
+              alt="Crianças se divertindo e aprendendo" 
+              className="w-full max-w-4xl h-auto object-contain mx-auto"
+            />
+          </div>
+
         </div>
       </section>
 
