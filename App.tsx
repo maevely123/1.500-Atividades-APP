@@ -453,14 +453,12 @@ const App: React.FC = () => {
                   </div>
                   
                   {/* Detailed Bonus List */}
-                  <div className="pl-2 space-y-2 mb-2">
-                    {BONUSES.map((bonus: any, idx: number) => (
-                      <div key={idx} className="flex items-center gap-2 text-gray-600">
-                         <div className="bg-green-50 p-0.5 rounded-full flex-shrink-0"><Check className="w-3 h-3 text-brand-green" /></div>
-                         <span className="text-xs font-medium">Bônus {idx + 1} - {bonus.title}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {BONUSES.map((bonus: any, idx: number) => (
+                    <div key={idx} className="flex items-center gap-3 text-gray-700">
+                       <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
+                       <span className="text-sm font-bold">Bônus {idx + 1} - {bonus.title}</span>
+                    </div>
+                  ))}
 
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
