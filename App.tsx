@@ -13,7 +13,8 @@ import {
   Menu,
   Check,
   Users,
-  BookOpen
+  BookOpen,
+  X
 } from 'lucide-react';
 import { Button } from './components/Button';
 import { Accordion } from './components/Accordion';
@@ -21,6 +22,8 @@ import { SalesNotification } from './components/SalesNotification';
 import { APP_CONTENT, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
 
 const App: React.FC = () => {
+  const [showUpsell, setShowUpsell] = React.useState(false);
+
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -403,7 +406,7 @@ const App: React.FC = () => {
               
               <div className="p-6 pt-0 mt-auto">
                 <Button 
-                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  onClick={() => setShowUpsell(true)} 
                   variant="secondary" 
                   fullWidth 
                   className="border-2 border-brand-green text-brand-green hover:bg-green-50"
@@ -512,6 +515,59 @@ const App: React.FC = () => {
           <Accordion items={FAQS} />
         </div>
       </section>
+
+      {/* UPSELL MODAL */}
+      {showUpsell && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative animate-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setShowUpsell(false)}
+              className="absolute top-3 right-3 p-1 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors z-10"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="bg-brand-yellow p-4 text-center relative">
+              <span className="font-heading font-bold text-brand-purpleDark text-lg uppercase tracking-wide">
+                ✋ ESPERE! OFERTA ESPECIAL
+              </span>
+            </div>
+
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Leve o Acesso Vitalício + Bônus
+              </h3>
+              <p className="text-gray-600 mb-6 text-sm">
+                Por uma diferença mínima, você garante acesso para sempre e todos os bônus exclusivos!
+              </p>
+
+              <div className="bg-purple-50 rounded-xl p-4 mb-6 border border-purple-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-brand-green text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">OFERTA ÚNICA</div>
+                <p className="text-sm text-gray-500 mb-1">De <span className="line-through decoration-red-500">R$ 37,00</span> por apenas:</p>
+                <p className="text-4xl font-extrabold text-brand-green tracking-tight">R$ 29,90</p>
+                <p className="text-xs text-brand-purple font-bold mt-1">Pagamento Único • Acesso Vitalício</p>
+              </div>
+
+              <div className="space-y-3">
+                <Button 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  fullWidth 
+                  className="py-4 text-lg shadow-brand-green/30 animate-pulse bg-brand-green hover:bg-green-600 text-white"
+                >
+                  SIM! QUERO POR R$ 29,90
+                </Button>
+                
+                <button 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"}
+                  className="text-sm text-gray-400 hover:text-gray-600 underline decoration-gray-300 underline-offset-2 transition-colors"
+                >
+                  Não obrigado, eu vou querer o básico
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 11️⃣ FOOTER */}
       <footer className="bg-brand-purple text-white py-12 border-t border-white/10">
