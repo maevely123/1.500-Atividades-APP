@@ -488,10 +488,12 @@ const App: React.FC = () => {
                     <div className="bg-brand-green p-1 rounded-full"><Check className="w-4 h-4 text-white" /></div>
                     <span className="text-sm font-bold">Acesso Vitalício (Para Sempre)</span>
                   </div>
+                  
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
-                    <span className="text-sm font-medium">Acesso Imediato a Tudo</span>
+                    <span className="text-sm font-medium">+1.500 Atividades Lúdicas</span>
                   </div>
+
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-medium">Todos os Bônus Exclusivos</span>
@@ -509,7 +511,17 @@ const App: React.FC = () => {
 
                   <div className="flex items-center gap-3 text-gray-700">
                     <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
+                    <span className="text-sm font-medium">Acesso Imediato a Tudo</span>
+                  </div>
+
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
                     <span className="text-sm font-medium">Atualizações Gratuitas</span>
+                  </div>
+
+                  <div className="flex items-center gap-3 text-gray-700">
+                    <div className="bg-brand-green/10 p-1 rounded-full"><Check className="w-4 h-4 text-brand-green" /></div>
+                    <span className="text-sm font-medium">Garantia de 7 Dias</span>
                   </div>
                 </div>
               </div>
