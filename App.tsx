@@ -58,12 +58,17 @@ const App: React.FC = () => {
             Tenha acesso ao <strong className="text-brand-purple font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
           </p>
 
-          {/* Hero Image */}
-          <img 
-            src="https://res.cloudinary.com/dvg6hojfs/image/upload/v1770581055/image_1770580969083_35hlbs_dt4f28.png" 
-            alt="Prévia das atividades educativas no celular e impressas" 
-            className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mb-8 object-contain"
-          />
+          {/* Hero Video */}
+          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mb-8 rounded-xl overflow-hidden shadow-2xl">
+            <iframe 
+              src="https://cozy-video-box.lovable.app/embed/9247d108-a94d-4ccf-85f8-05e3b54f089f?color=%23a542d7&progress=%23a542d7&controls=false&autoplay=false&loop=false" 
+              width="100%" 
+              height="450" 
+              frameBorder="0" 
+              allowFullScreen 
+              allow="autoplay; fullscreen"
+            ></iframe>
+          </div>
 
           <div className="flex flex-col items-center w-full">
             <Button onClick={scrollToOffer} className="shadow-brand-green/20 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
