@@ -45,17 +45,21 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-20 text-center text-gray-900 flex flex-col items-center">
           
           {/* Top Badge - Urgency */}
-          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-6 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.4)] animate-pulse border-2 border-yellow-200">
+          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-4 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.4)] animate-pulse border-2 border-yellow-200">
             ⚠️ Restam Apenas 57 Acessos
           </div>
+
+          {/* Pre-headline */}
+          <p className="text-brand-purple font-extrabold text-sm md:text-base uppercase tracking-wider mb-3">
+            Para pais e professores de crianças de 3 a 8 anos
+          </p>
           
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4 max-w-4xl mx-auto">
-            📱 1.500 ATIVIDADES INTERATIVAS <br className="hidden md:block"/>
-            <span className="text-brand-purple">para reforçar e acelerar</span> o aprendizado
+            +1.500 Atividades Educativas Prontas Para Imprimir Que Ajudam Crianças a Aprender Brincando
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-6 leading-relaxed">
-            Tenha acesso ao <strong className="text-brand-purple font-bold">APP EDUCACIONAL MAIS COMPLETO DO BRASIL</strong>, com mais de 1.500 atividades infantis organizadas, prontas para baixar direto no seu celular.
+          <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-6 leading-relaxed font-medium">
+            Tenha acesso ao app educacional com atividades organizadas para crianças de 3 a 8 anos.
           </p>
 
           {/* Hero Video */}
