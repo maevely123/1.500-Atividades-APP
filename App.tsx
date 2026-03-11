@@ -35,35 +35,42 @@ const App: React.FC = () => {
       <SalesNotification />
       
       {/* 1️⃣ HERO SECTION */}
-      <header className="relative bg-gradient-to-b from-[#F3E8FF] to-[#E9D5FF] overflow-hidden pt-2 pb-24 lg:pt-4 lg:pb-48">
+      <header className="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 overflow-hidden pt-8 pb-24 lg:pt-12 lg:pb-40">
         {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-50 pointer-events-none">
-          <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-brand-purple/20 blur-xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-brand-yellow/30 blur-2xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-60 pointer-events-none">
+          <div className="absolute top-[-10%] left-[-5%] w-96 h-96 rounded-full bg-brand-purple/10 blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-[20%] right-[-5%] w-[30rem] h-[30rem] rounded-full bg-brand-yellow/20 blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-[40%] left-[20%] w-64 h-64 rounded-full bg-brand-green/10 blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-20 text-center text-gray-900 flex flex-col items-center">
+        <div className="container mx-auto px-4 relative z-20 text-center flex flex-col items-center">
           
           {/* Top Badge - Urgency */}
-          <div className="inline-block bg-brand-yellow text-brand-purpleDark px-4 py-1.5 rounded-full mb-4 font-bold text-xs md:text-sm tracking-wide shadow-[0_0_15px_rgba(255,215,0,0.4)] animate-pulse border-2 border-yellow-200">
-            ⚠️ Restam Apenas 57 Acessos
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full mb-8 font-bold text-xs md:text-sm shadow-sm animate-pulse border border-orange-200">
+            <span>⚠️</span> Restam Apenas 57 Acessos Hoje
           </div>
 
           {/* Pre-headline */}
-          <p className="text-brand-purple font-extrabold text-sm md:text-base uppercase tracking-wider mb-3">
+          <p className="text-gray-500 font-medium text-xs md:text-sm uppercase tracking-widest mb-4 animate-in fade-in slide-in-from-bottom-2 duration-500">
             Para pais e professores de crianças de 3 a 8 anos
           </p>
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4 max-w-4xl mx-auto">
-            +1.500 Atividades Educativas Prontas Para Imprimir Que Ajudam Crianças a Aprender Brincando
+          {/* Headline */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold leading-[1.15] mb-6 max-w-4xl mx-auto text-gray-900 animate-in fade-in slide-in-from-bottom-3 duration-700">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-purple-600">+1.500</span> Atividades Educativas <br className="hidden sm:block" />
+            Prontas Para Imprimir <br className="hidden sm:block" />
+            Que Ajudam Crianças <br className="hidden sm:block" />
+            a <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-500">Aprender Brincando</span>
           </h1>
           
-          <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-6 leading-relaxed font-medium">
-            Tenha acesso ao app educacional com atividades organizadas para crianças de 3 a 8 anos.
+          {/* Subheadline */}
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            Tenha acesso ao app educacional com mais de <strong className="text-gray-900 font-bold">1.500 atividades</strong> organizadas para crianças de 3 a 8 anos. <br className="hidden md:block" />
+            <strong className="text-gray-900 font-bold">Baixe</strong>, <strong className="text-gray-900 font-bold">imprima</strong> e comece a usar em minutos.
           </p>
 
           {/* Hero Video */}
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mb-8 rounded-xl overflow-hidden shadow-2xl">
+          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/50 animate-in fade-in zoom-in-95 duration-1000 delay-200">
             <iframe 
               src="https://cozy-video-box.lovable.app/embed/9247d108-a94d-4ccf-85f8-05e3b54f089f?color=%23a542d7&progress=%23a542d7&controls=false&autoplay=false&loop=false" 
               width="100%" 
@@ -71,31 +78,20 @@ const App: React.FC = () => {
               frameBorder="0" 
               allowFullScreen 
               allow="autoplay; fullscreen"
+              className="w-full bg-gray-100"
             ></iframe>
           </div>
 
-          <div className="flex flex-col items-center w-full">
-            <Button onClick={scrollToOffer} className="shadow-brand-green/20 shadow-xl text-base md:text-lg px-8 py-3 md:px-10 md:py-4 w-full max-w-sm md:w-auto animate-bounce-subtle transform hover:scale-105 transition-transform duration-200">
-              ⬇️ QUERO ACESSAR O APP AGORA
+          {/* CTA & Microcopy */}
+          <div className="flex flex-col items-center w-full animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+            <Button onClick={scrollToOffer} className="shadow-brand-green/30 shadow-2xl text-base md:text-xl px-8 py-4 md:px-12 md:py-6 w-full max-w-md md:w-auto animate-bounce-subtle transform hover:scale-105 transition-all duration-300 bg-brand-green hover:bg-green-600 text-white rounded-full font-extrabold tracking-wide">
+              QUERO ACESSAR AS 1.500 ATIVIDADES
             </Button>
-            <p className="mt-3 text-xs text-gray-500 opacity-90 font-medium tracking-wide">
-              🔒 Compra 100% segura • Acesso imediato
-            </p>
-          </div>
-
-          {/* Feature Pills - Tight row */}
-          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-6 text-xs font-semibold text-gray-600">
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
-              <Smartphone className="w-3.5 h-3.5 text-brand-purple" />
-              <span className="whitespace-nowrap">Tudo no app</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
-              <FileText className="w-3.5 h-3.5 text-brand-purple" />
-              <span className="whitespace-nowrap">Sem bagunça</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-purple-100 shadow-sm">
-              <Download className="w-3.5 h-3.5 text-brand-purple" />
-              <span className="whitespace-nowrap">Acesso rápido</span>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mt-6 text-sm font-medium text-gray-600">
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Acesso imediato</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Funciona no celular</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Atividades prontas para imprimir</span>
             </div>
           </div>
         </div>
