@@ -23,6 +23,47 @@ import { APP_CONTENT, BONUSES, HOW_IT_WORKS, FAQS } from './constants';
 
 const App: React.FC = () => {
   const [showUpsell, setShowUpsell] = React.useState(false);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = React.useState(0);
+  const touchStartX = React.useRef<number | null>(null);
+  const touchEndX = React.useRef<number | null>(null);
+
+  const testimonialImages = [
+    "https://res.cloudinary.com/dvg6hojfs/image/upload/v1773516399/img_0136_3_mgl2ii.png",
+    "https://res.cloudinary.com/dvg6hojfs/image/upload/v1773516255/img_0136_1_d7hc5p.png",
+    "https://res.cloudinary.com/dvg6hojfs/image/upload/v1773516370/img_0363_3_sj0adu.png",
+    "https://res.cloudinary.com/dvg6hojfs/image/upload/v1773516256/img_0363_2_ejpkz6.png"
+  ];
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prev) => (prev + 1) % testimonialImages.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [testimonialImages.length]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentTestimonialIndex((prev) => (prev + 1) % testimonialImages.length);
+    } else if (isRightSwipe) {
+      setCurrentTestimonialIndex((prev) => (prev - 1 + testimonialImages.length) % testimonialImages.length);
+    }
+    
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
@@ -305,16 +346,40 @@ const App: React.FC = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto w-full px-4 md:px-0">
-             <iframe 
-               src="https://cozy-video-box.lovable.app/embed/25a5f57b-1fe7-42e9-b2bb-ada7c345bf8b?color=%239F21E3&progress=%239F21E3&controls=false&autoplay=false&loop=false" 
-               width="100%" 
-               height="450" 
-               frameBorder="0" 
-               allowFullScreen 
-               allow="autoplay; fullscreen"
-               className="rounded-2xl shadow-xl w-full"
-             ></iframe>
+          <div className="max-w-md mx-auto w-full px-4 md:px-0 relative overflow-hidden">
+             <div 
+               className="relative w-full aspect-[9/16] rounded-2xl shadow-xl overflow-hidden bg-gray-100"
+               onTouchStart={handleTouchStart}
+               onTouchMove={handleTouchMove}
+               onTouchEnd={handleTouchEnd}
+             >
+               {testimonialImages.map((img, idx) => (
+                 <img
+                   key={idx}
+                   src={img}
+                   alt={`Depoimento ${idx + 1}`}
+                   className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ${
+                     idx === currentTestimonialIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                   }`}
+                 />
+               ))}
+             </div>
+             
+             {/* Navigation Dots */}
+             <div className="flex justify-center gap-2 mt-6">
+               {testimonialImages.map((_, idx) => (
+                 <button
+                   key={idx}
+                   onClick={() => setCurrentTestimonialIndex(idx)}
+                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                     idx === currentTestimonialIndex 
+                       ? 'bg-brand-purple w-6' 
+                       : 'bg-brand-purple/30 hover:bg-brand-purple/50'
+                   }`}
+                   aria-label={`Ir para depoimento ${idx + 1}`}
+                 />
+               ))}
+             </div>
           </div>
         </div>
       </section>
