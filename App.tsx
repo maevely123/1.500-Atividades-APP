@@ -380,6 +380,16 @@ const App: React.FC = () => {
                  />
                ))}
              </div>
+
+             {/* CTA Button */}
+             <div className="mt-8 flex justify-center">
+               <Button 
+                 onClick={scrollToOffer} 
+                 className="shadow-brand-green/30 shadow-xl text-base md:text-lg px-8 py-4 w-full animate-bounce-subtle transform hover:scale-105 transition-all duration-300 bg-brand-green hover:bg-green-600 text-white rounded-full font-extrabold tracking-wide"
+               >
+                 Quero Ter as Atividades
+               </Button>
+             </div>
           </div>
         </div>
       </section>
