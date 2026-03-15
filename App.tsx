@@ -612,7 +612,7 @@ const App: React.FC = () => {
               
               <div className="p-8 pt-0 mt-auto">
                 <Button 
-                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/0xucq"} 
                   fullWidth 
                   className="py-5 text-xl shadow-xl shadow-brand-green/30 animate-pulse hover:scale-[1.02] transition-transform bg-brand-green hover:bg-green-600 border-none"
                 >
@@ -724,7 +724,7 @@ const App: React.FC = () => {
 
               <div className="space-y-3">
                 <Button 
-                  onClick={() => window.location.href = "https://go.pepperpay.com.br/gk3rj"} 
+                  onClick={() => window.location.href = "https://go.pepperpay.com.br/jqju6"} 
                   fullWidth 
                   className="py-4 text-lg shadow-brand-green/30 animate-pulse bg-brand-green hover:bg-green-600 text-white shadow-lg transform hover:scale-105 transition-all"
                 >
